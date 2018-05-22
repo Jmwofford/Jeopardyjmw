@@ -3,88 +3,86 @@
 
 
 
-// var score;
+var score=0;
+
+var wrongAnswer = function() {
+        // score.push(index.pointVal*-1);
+        score -= index.pointVal;
+        console.log('negative score pushed.');
+        console.log(score)
+}
+
+var rightAnswer = function () {
+    // score.push(index.pointVal);
+    score += index.pointVal;
+    console.log('positive score pushed.');
+    console.log(score)
+}
 
 
-// var wrongAnswer = function () {
 
-//     if (wrongAnswer) {
-//         PointVal - score;
-//     }
+const entertainment = {
+    question: 'What is the Point??',
+    answer: 'entertainment answer',
+    id: 'q100',
+    pointVal: 100
 
-// }
-
-// var rightAnswer = function () {
-//     if (rightAnswer) {
-//         PointVal + score;
-//     }
-// }
-
-
-// const questions = [{
-//     question: 'test question',
-//     answer: 'test answer',
+}
+// const index2 = [{
+//     question: 'geography question',
+//     answer: 'geography answer',
+//     id: 'q100',
+//     pointVal: 100
+// }]
+// const index3 = [{
+//     question: 'math question',
+//     answer: 'math answer',
+//     id: 'q100',
+//     pointVal: 100
+// }]
+// const index4 = [{
+//     question: 'music question',
+//     answer: 'music answer',
+//     id: 'q100',
+//     pointVal: 100
+// }]
+// const index5 = [{
+//     question: 'art question',
+//     answer: 'art answer',
 //     id: 'q100',
 //     pointVal: 100
 // }]
 
-const index1 = [{
-    question: 'entertainment question',
-    answer: 'entertainment answer',
-    id: 'q100',
-    pointVal: 100
-}]
-const index2 = [{
-    question: 'geography question',
-    answer: 'geography answer',
-    id: 'q100',
-    pointVal: 100
-}]
-const index3 = [{
-    question: 'math question',
-    answer: 'math answer',
-    id: 'q100',
-    pointVal: 100
-}]
-const index4 = [{
-    question: 'music question',
-    answer: 'music answer',
-    id: 'q100',
-    pointVal: 100
-}]
-const index5 = [{
-    question: 'art question',
-    answer: 'art answer',
-    id: 'q100',
-    pointVal: 100
-}]
-
 
 //   const currentQuestionInfo = boardInfo['q100'];
-
-
-
-$('.q100').click(function () {
-    const question = index1.find((question) => {
-        return index1.id === 'q100'
-    })
-
+//
+//===================================================================//
+$('.q100').click(function() { 
+    // const question = index.find((question) => {
+    //     return question.id === 'q100'
+    // })
     
-    $(this).html("Question is ... blahblahblah")
-
+    
+    $(this).html(`<h3>${entertainment.question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
-
     $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
-
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
-    $(this).append('<button class="isright">WrongAnswer</button')
-    $(this).blur();
-});
+    $(this).append('<button class="iswrong">WrongAnswer</button')
+     $('.isright').click(function() {
+                console.log('this worked RIGHT');
+                        rightAnswer();
+                                    })
 
-$("isright").click(function () {
+$('.iswrong').click(function() {
 
-
-
+    console.log('this WORKED WRONG');
+    wrongAnswer();
 })
+})
+
+
+
+
+//===================================================================//
 

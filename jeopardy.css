@@ -97,3 +97,13 @@ body{
     justify-content: space-around;
 
 }
+.iswrong{
+    height: 50px;
+    width:110px;
+    border:dashed #1E009B;
+    background-color: #FFD000;
+    border-radius:45px;
+    margin-top:200px;
+    padding: 16px;
+    justify-content: space-around;
+}
