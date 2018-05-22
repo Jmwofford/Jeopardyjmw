@@ -7,57 +7,58 @@ var score=0;
 
 var wrongAnswer = function() {
         // score.push(index.pointVal*-1);
-        score -= index.pointVal;
+        score -= entertainment.pointVal;
         console.log('negative score pushed.');
         console.log(score)
 }
 
 var rightAnswer = function () {
     // score.push(index.pointVal);
-    score += index.pointVal;
+    score += entertainment.pointVal;
     console.log('positive score pushed.');
     console.log(score)
+    
 }
 
 
 
 const entertainment = {
-    question: 'What is the Point??',
+    question: 'What is the Entertainment ??',
     answer: 'entertainment answer',
-    id: 'q100',
-    pointVal: 100
+    id: 'e100',
+    pointVal: 200
 
 }
-// const index2 = [{
-//     question: 'geography question',
-//     answer: 'geography answer',
-//     id: 'q100',
-//     pointVal: 100
-// }]
-// const index3 = [{
-//     question: 'math question',
-//     answer: 'math answer',
-//     id: 'q100',
-//     pointVal: 100
-// }]
-// const index4 = [{
-//     question: 'music question',
-//     answer: 'music answer',
-//     id: 'q100',
-//     pointVal: 100
-// }]
-// const index5 = [{
-//     question: 'art question',
-//     answer: 'art answer',
-//     id: 'q100',
-//     pointVal: 100
-// }]
+const geography = {
+    question: 'What is Geography ??',
+    answer: 'geography answer',
+    id: 'g100',
+    pointVal: 200
+}
+const math = {
+    question: 'What is Math ??',
+    answer: 'math answer',
+    id: 'm100',
+    pointVal: 200
+}
+const music = {
+    question: 'What is Music ??',
+    answer: 'music answer',
+    id: 'q100',
+    pointVal: 200
+}
+const art = {
+    question: 'What is art ??',
+    answer: 'art answer',
+    id: 'a100',
+    pointVal: 200
+}
 
 
 //   const currentQuestionInfo = boardInfo['q100'];
 //
 //===================================================================//
-$('.q100').click(function() { 
+$('.e100').click(function() { 
     // const question = index.find((question) => {
     //     return question.id === 'q100'
     // })
@@ -86,3 +87,105 @@ $('.iswrong').click(function() {
 
 //===================================================================//
 
+$('.g100').click(function() { 
+    // const question = index.find((question) => {
+    //     return question.id === 'q100'
+    // })
+    
+    
+    $(this).html(`<h3>${geography.question}</h3>`)
+    $(this).prepend('<img id="clock" src="timer30.gif" />')
+    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
+    $(this).append('<button class="isright">RightAnswer</button')
+    $(this).append('<button class="iswrong">WrongAnswer</button')
+     $('.isright').click(function() {
+                console.log('this worked RIGHT');
+                        rightAnswer();
+                                    })
+
+$('.iswrong').click(function() {
+
+    console.log('this WORKED WRONG');
+    wrongAnswer();
+})
+})
+//===================================================================//
+//===================================================================//
+
+$('.m100').click(function() { 
+    // const question = index.find((question) => {
+    //     return question.id === 'q100'
+    // })
+    
+    
+    $(this).html(`<h3>${math.question}</h3>`)
+    $(this).prepend('<img id="clock" src="timer30.gif" />')
+    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
+    $(this).append('<button class="isright">RightAnswer</button')
+    $(this).append('<button class="iswrong">WrongAnswer</button')
+     $('.isright').click(function() {
+                console.log('this worked RIGHT');
+                        rightAnswer();
+                                    })
+
+$('.iswrong').click(function() {
+
+    console.log('this WORKED WRONG');
+    wrongAnswer();
+})
+})
+//===================================================================//
+//===================================================================//
+
+$('.q100').click(function() { 
+    // const question = index.find((question) => {
+    //     return question.id === 'q100'
+    // })
+    
+    
+    $(this).html(`<h3>${music.question}</h3>`)
+    $(this).prepend('<img id="clock" src="timer30.gif" />')
+    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
+    $(this).append('<button class="isright">RightAnswer</button')
+    $(this).append('<button class="iswrong">WrongAnswer</button')
+     $('.isright').click(function() {
+                console.log('this worked RIGHT');
+                        rightAnswer();
+                                    })
+
+$('.iswrong').click(function() {
+
+    console.log('this WORKED WRONG');
+    wrongAnswer();
+})
+})
+//===================================================================//
+//===================================================================//
+
+$('.a100').click(function() { 
+    // const question = index.find((question) => {
+    //     return question.id === 'q100'
+    // })
+    
+    
+    $(this).html(`<h3>${art.question}</h3>`)
+    $(this).prepend('<img id="clock" src="timer30.gif" />')
+    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
+    $(this).append('<button class="isright">RightAnswer</button')
+    $(this).append('<button class="iswrong">WrongAnswer</button')
+     $('.isright').click(function() {
+                console.log('this worked RIGHT');
+                        rightAnswer();
+                                    })
+
+$('.iswrong').click(function() {
+
+    console.log('this WORKED WRONG');
+    wrongAnswer();
+})
+})
+//===================================================================//
