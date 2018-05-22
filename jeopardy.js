@@ -7,7 +7,7 @@
 var score=0;
 
 var wrongAnswer = function(blockid) {
-        // score.push(index.pointVal*-1);
+        
         score -= entertainment.pointVal;
         console.log('negative score pushed.');
         console.log(score)
@@ -17,7 +17,7 @@ var wrongAnswer = function(blockid) {
 }
 
 var rightAnswer = function (blockid) {
-    // score.push(index.pointVal);
+  
     score += entertainment.pointVal;
     console.log('positive score pushed.');
     console.log(score)
@@ -34,50 +34,55 @@ var tellMeIfChosenAnswerIsCorrectAnswer = function (chosen, correct) {
 }
 
 
-const entertainment = {
-    question: 'What is the Entertainment ??',
-    answer: 'entertainment answer',
-    id: 'e100',
-    pointVal: 200
+// const entertainment = {
+//     question: 'What is the Entertainment ??',
+//     answer: 'entertainment answer',
+//     id: 'e100',
+//     pointVal: 200
 
-}
+// }
 
 const entertainmentCategory = [
     {
-        question: 'What is the Entertainment ??',
-        choice1: "something",
-        choice2: "something else",
-        choice3: "this guy",
-        choice4: "correct answer is this one",
-        answer: 'correct answer is this one',
+        question: 'What is Michael Jacksons Most Famous Song??',
+        choice1: "Thriller",
+        choice2: "Beat It",
+        choice3: "Cant Buy Me Love",
+        choice4: "Man in Mirror",
+        answer: "Man in Mirror",
         id: 'e100',
         pointVal: 200 
     },
     {
         question: 'What is the Entertainment ??',
         answer: 'entertainment answer',
-        id: 'e100',
+        id: 'e200',
         pointVal: 400
     },
     {
         question: 'What is the Entertainment ??',
         answer: 'entertainment answer',
-        id: 'e100',
+        id: 'e300',
         pointVal: 600
     },
     {
         question: 'What is the Entertainment ??',
         answer: 'entertainment answer',
-        id: 'e100',
+        id: 'e400',
         pointVal: 800
     },
     {
         question: 'What is the Entertainment ??',
         answer: 'entertainment answer',
-        id: 'e100',
+        id: 'e400',
         pointVal: 1000
     }
 ]
+
+
+
+
+
 const geography = {
     question: 'What is Geography ??',
     answer: 'geography answer',
@@ -107,18 +112,16 @@ const art = {
 
 
 
+
+
 window.onload= function(){
-    // var initialVar = 0;
     $('#scorevalue').text(score)
 }
 
-//   const currentQuestionInfo = boardInfo['q100'];
+
 //
 //===================================================================//
 $('.e100').click(function() { 
-    // const question = index.find((question) => {
-    //     return question.id === 'q100'
-    // })
     
     var chosen = "";
     
@@ -133,6 +136,17 @@ $('.e100').click(function() {
     // call your right answer
     // if not
     // call wrong answer
+
+    $(this).append('<button class="iswrong">wrongAnswer</button')
+    $(this).append('<button class="iswrong">wrongAnswer</button')
+    $(this).append('<button class="iswrong">wrongAnswer</button')
+    $(this).append('<button class="isright">RightAnswer</button')
+    
+
+
+
+
+    // --------------------------------
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
