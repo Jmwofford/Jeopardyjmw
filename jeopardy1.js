@@ -5,12 +5,19 @@
 
 var score = 0;
 
-var wrongAnswer = function () {
+var wrongAnswer = function (pointVal) {
     // score.push(index.pointVal*-1);
-    score -= entertainmentCategory[0].pointVal;
+    score -= pointVal;
     console.log('negative score pushed.');
     $('#scorevalue').text(score)
     console.log(score)
+    checkWinCondition()
+}
+
+var checkWinCondition = function () {
+    if (score >= 500) {
+        $('.superclassGrid').prepend('<img id="winning" src="break.gif" />')
+    }
 }
 
 var rightAnswer = function () {
@@ -19,6 +26,7 @@ var rightAnswer = function () {
     $('#scorevalue').text(score)
     console.log('positive score pushed.');
     console.log(score)
+    checkWinCondition()
 
 }
 window.onload = function () {
@@ -334,7 +342,7 @@ $('.e100').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer();
+        wrongAnswer(entertainmentCategory[0].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
     })
 })
@@ -363,7 +371,7 @@ $('.e200').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer();
+        wrongAnswer(entertainmentCategory[1].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
 
     })
@@ -1087,7 +1095,7 @@ $('.a500').click(function () {
     $('.isright').click(function () {
         console.log('this worked RIGHT');
         rightAnswer();
-    
+
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
 
