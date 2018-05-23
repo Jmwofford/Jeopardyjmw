@@ -14,26 +14,29 @@ var wrongAnswer = function (pointVal) {
     checkWinCondition()
 }
 
-var checkWinCondition = function () {
-    if (score >= 500) {
-        $('.superclassGrid').prepend('<img id="winning" src="break.gif" />')
-    }
-}
 
-var rightAnswer = function () {
+
+var rightAnswer = function (pointVal) {
     // score.push(index.pointVal);
-    score += entertainmentCategory[0].pointVal;
+    score += pointVal;
     $('#scorevalue').text(score)
     console.log('positive score pushed.');
     console.log(score)
     checkWinCondition()
 
 }
+
 window.onload = function () {
     $('#scorevalue').text(score)
 }
 
-
+var checkWinCondition = function () {
+    if (score >= 500) {
+        $('.superclassGrid').replaceWith('<img id="winning" src="break.gif" />')
+        $('superclassGrid').append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
+        $('.superclassGrid').replaceWith('<img id="winning" src="break.gif" />')
+    }
+}
 
 const entertainmentCategory = [
     {
@@ -335,7 +338,7 @@ $('.e100').click(function () {
     $('.isright').click(function () {
         console.log('this worked RIGHT');
         console.log(popup)
-        rightAnswer();
+        rightAnswer(entertainmentCategory[0].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
     })
 
@@ -363,7 +366,7 @@ $('.e200').click(function () {
 
     $('.isright').click(function () {
         console.log('this worked RIGHT');
-        rightAnswer();
+        rightAnswer(entertainmentCategory[1].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
     })
@@ -393,7 +396,7 @@ $('.e300').click(function () {
 
     $('.isright').click(function () {
         console.log('this worked RIGHT');
-        rightAnswer();
+        rightAnswer(entertainmentCategory[2].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
     })
@@ -401,7 +404,7 @@ $('.e300').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer();
+        wrongAnswer(entertainmentCategory[2].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
 
     })
@@ -424,7 +427,7 @@ $('.e400').click(function () {
 
     $('.isright').click(function () {
         console.log('this worked RIGHT');
-        rightAnswer();
+        rightAnswer(entertainmentCategory[3].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
     })
@@ -432,7 +435,7 @@ $('.e400').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer();
+        wrongAnswer(entertainmentCategory[3]);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
 
     })

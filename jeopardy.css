@@ -218,3 +218,9 @@ body{
 h3{
     font-size: 45px;
 }
+#winning{
+    height:250px;
+    width:250px;
+    border-radius: 50%;
+    
+}
