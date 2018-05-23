@@ -618,7 +618,7 @@ $('.m100').click(function () {
     //     return question.id === 'q100'
     // })
 
-
+    const popup = $(this)
     $(this).html(`<h3>${entertainmentCategory[1].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
@@ -631,6 +631,8 @@ $('.m100').click(function () {
     $('.isright').click(function () {
         console.log('this worked RIGHT');
         rightAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
+
 
     })
 
@@ -638,6 +640,9 @@ $('.m100').click(function () {
 
         console.log('this WORKED WRONG');
         wrongAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
+
+
     })
 })
 $('.m200').click(function () {
@@ -645,6 +650,7 @@ $('.m200').click(function () {
     //     return question.id === 'q100'
     // })
 
+    const popup = $(this)
 
     $(this).html(`<h3>${entertainmentCategory[2].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
@@ -658,6 +664,8 @@ $('.m200').click(function () {
     $('.isright').click(function () {
         console.log('this worked RIGHT');
         rightAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
+
 
     })
 
@@ -665,6 +673,8 @@ $('.m200').click(function () {
 
         console.log('this WORKED WRONG');
         wrongAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
+
     })
 })
 ///////////DailyDouble//////////////
@@ -673,6 +683,7 @@ $('.m300').click(function () {
     //     return question.id === 'q100'
     // })
 
+    const popup = $(this)
 
     $(this).html(`<h3>${entertainmentCategory[3].question}</h3>`)
     $(this).prepend('<img id="dailydub" src="dailydub.gif" />')
@@ -686,6 +697,8 @@ $('.m300').click(function () {
     $('.isright').click(function () {
         console.log('this worked RIGHT');
         rightAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
+
 
     })
 
@@ -693,6 +706,8 @@ $('.m300').click(function () {
 
         console.log('this WORKED WRONG');
         wrongAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
+
     })
 })
 ///////////DailyDouble//////////////
@@ -701,6 +716,7 @@ $('.m400').click(function () {
     //     return question.id === 'q100'
     // })
 
+    const popup = $(this)
 
     $(this).html(`<h3>${entertainmentCategory[4].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
@@ -714,6 +730,8 @@ $('.m400').click(function () {
     $('.isright').click(function () {
         console.log('this worked RIGHT');
         rightAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
+
 
     })
 
@@ -721,12 +739,15 @@ $('.m400').click(function () {
 
         console.log('this WORKED WRONG');
         wrongAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
+
     })
 })
 $('.m500').click(function () {
     // const question = index.find((question) => {
     //     return question.id === 'q100'
     // })
+    const popup = $(this)
 
 
     $(this).html(`<h3>${entertainmentCategory[5].question}</h3>`)
@@ -741,6 +762,8 @@ $('.m500').click(function () {
     $('.isright').click(function () {
         console.log('this worked RIGHT');
         rightAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
+
 
     })
 
@@ -748,6 +771,8 @@ $('.m500').click(function () {
 
         console.log('this WORKED WRONG');
         wrongAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
+
     })
 })
 // ================================================MathCategory===========================================
@@ -756,6 +781,7 @@ $('.q100').click(function () {
     //     return question.id === 'q100'
     // })
 
+    const popup = $(this)
 
     $(this).html(`<h3>${entertainmentCategory[1].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
@@ -769,6 +795,8 @@ $('.q100').click(function () {
     $('.isright').click(function () {
         console.log('this worked RIGHT');
         rightAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
+
 
     })
 
@@ -776,6 +804,8 @@ $('.q100').click(function () {
 
         console.log('this WORKED WRONG');
         wrongAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
+
     })
 })
 $('.q200').click(function () {
@@ -783,6 +813,7 @@ $('.q200').click(function () {
     //     return question.id === 'q100'
     // })
 
+    const popup = $(this)
 
     $(this).html(`<h3>${entertainmentCategory[2].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
@@ -796,6 +827,8 @@ $('.q200').click(function () {
     $('.isright').click(function () {
         console.log('this worked RIGHT');
         rightAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
+
 
     })
 
@@ -803,6 +836,8 @@ $('.q200').click(function () {
 
         console.log('this WORKED WRONG');
         wrongAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
+
     })
 })
 $('.q300').click(function () {
@@ -810,6 +845,7 @@ $('.q300').click(function () {
     //     return question.id === 'q100'
     // })
 
+    const popup = $(this)
 
     $(this).html(`<h3>${entertainmentCategory[3].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
@@ -823,6 +859,8 @@ $('.q300').click(function () {
     $('.isright').click(function () {
         console.log('this worked RIGHT');
         rightAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
+
 
     })
 
@@ -830,6 +868,8 @@ $('.q300').click(function () {
 
         console.log('this WORKED WRONG');
         wrongAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
+
     })
 })
 $('.q400').click(function () {
@@ -837,6 +877,7 @@ $('.q400').click(function () {
     //     return question.id === 'q100'
     // })
 
+    const popup = $(this)
 
     $(this).html(`<h3>${entertainmentCategory[4].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
@@ -850,6 +891,8 @@ $('.q400').click(function () {
     $('.isright').click(function () {
         console.log('this worked RIGHT');
         rightAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
+
 
     })
 
@@ -857,6 +900,8 @@ $('.q400').click(function () {
 
         console.log('this WORKED WRONG');
         wrongAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
+
     })
 })
 $('.q500').click(function () {
@@ -864,6 +909,7 @@ $('.q500').click(function () {
     //     return question.id === 'q100'
     // })
 
+    const popup = $(this)
 
     $(this).html(`<h3>${entertainmentCategory[5].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
@@ -877,6 +923,8 @@ $('.q500').click(function () {
     $('.isright').click(function () {
         console.log('this worked RIGHT');
         rightAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
+
 
     })
 
@@ -884,6 +932,8 @@ $('.q500').click(function () {
 
         console.log('this WORKED WRONG');
         wrongAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
+
     })
 })
 // =================================================================musicCategory==========================
@@ -892,6 +942,7 @@ $('.a100').click(function () {
     //     return question.id === 'q100'
     // })
 
+    const popup = $(this)
 
     $(this).html(`<h3>${entertainmentCategory[1].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
@@ -905,6 +956,8 @@ $('.a100').click(function () {
     $('.isright').click(function () {
         console.log('this worked RIGHT');
         rightAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
+
 
     })
 
@@ -912,6 +965,8 @@ $('.a100').click(function () {
 
         console.log('this WORKED WRONG');
         wrongAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
+
     })
 })
 $('.a200').click(function () {
@@ -919,6 +974,7 @@ $('.a200').click(function () {
     //     return question.id === 'q100'
     // })
 
+    const popup = $(this)
 
     $(this).html(`<h3>${entertainmentCategory[2].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
@@ -932,6 +988,7 @@ $('.a200').click(function () {
     $('.isright').click(function () {
         console.log('this worked RIGHT');
         rightAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
     })
 
@@ -939,6 +996,8 @@ $('.a200').click(function () {
 
         console.log('this WORKED WRONG');
         wrongAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
+
     })
 })
 $('.a300').click(function () {
@@ -946,6 +1005,7 @@ $('.a300').click(function () {
     //     return question.id === 'q100'
     // })
 
+    const popup = $(this)
 
     $(this).html(`<h3>${entertainmentCategory[3].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
@@ -959,6 +1019,8 @@ $('.a300').click(function () {
     $('.isright').click(function () {
         console.log('this worked RIGHT');
         rightAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
+
 
     })
 
@@ -966,6 +1028,8 @@ $('.a300').click(function () {
 
         console.log('this WORKED WRONG');
         wrongAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
+
     })
 })
 ///////////DailyDouble//////////////
@@ -974,6 +1038,7 @@ $('.a400').click(function () {
     //     return question.id === 'q100'
     // })
 
+    const popup = $(this)
 
     $(this).html(`<h3>${entertainmentCategory[4].question}</h3>`)
     $(this).prepend('<img id="dailydub" src="dailydub.gif" />')
@@ -987,6 +1052,8 @@ $('.a400').click(function () {
     $('.isright').click(function () {
         console.log('this worked RIGHT');
         rightAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
+
 
     })
 
@@ -994,6 +1061,8 @@ $('.a400').click(function () {
 
         console.log('this WORKED WRONG');
         wrongAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
+
     })
 })
 ///////////DailyDouble//////////////
@@ -1002,6 +1071,7 @@ $('.a500').click(function () {
     //     return question.id === 'q100'
     // })
 
+    const popup = $(this)
 
     $(this).html(`<h3>${entertainmentCategory[5].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
@@ -1015,6 +1085,9 @@ $('.a500').click(function () {
     $('.isright').click(function () {
         console.log('this worked RIGHT');
         rightAnswer();
+    
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
+
 
     })
 
@@ -1022,6 +1095,8 @@ $('.a500').click(function () {
 
         console.log('this WORKED WRONG');
         wrongAnswer();
+        popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
+
     })
 })
 // =======================================================ArtCategory=======================================
