@@ -150,7 +150,7 @@ const mathCategory = [
         choice3: "Cant Buy Me Love",
         choice4: "Man in Mirror",
         answer: "Man in Mirror",
-        id: 'e100',
+        id: 'm100',
         pointVal: 200
     },
     {
@@ -161,7 +161,7 @@ const mathCategory = [
         choice3: "Cant Buy Me Love",
         choice4: "Man in Mirror",
         answer: "Man in Mirror",
-        id: 'e200',
+        id: 'm200',
         pointVal: 400
     },
     {
@@ -172,7 +172,7 @@ const mathCategory = [
         choice3: "Cant Buy Me Love",
         choice4: "Man in Mirror",
         answer: "Man in Mirror",
-        id: 'e300',
+        id: 'm300',
         pointVal: 600
     },
     {
@@ -183,7 +183,7 @@ const mathCategory = [
         choice4: "Man in Mirror",
         answer: "Man in Mirror",
         answer: 'Creed',
-        id: 'e400',
+        id: 'm400',
         pointVal: 800
     },
     {
@@ -194,7 +194,7 @@ const mathCategory = [
         choice4: "Man in Mirror",
         answer: "Man in Mirror",
         answer: 'TDE artist',
-        id: 'e500',
+        id: 'm500',
         pointVal: 1000
     }
 ]
