@@ -85,17 +85,17 @@ const entertainmentCategory = [
 ]
 const geographyCategory = [
     {
-        question: 'What is Michael Jacksons Most Famous Song??',
-        choice1: "Thriller",
-        choice2: "Beat It",
-        choice3: "Cant Buy Me Love",
-        choice4: "Man in Mirror",
-        answer: "Man in Mirror",
+        question: 'Where is Mount Vesuvius Located??',
+        choice1: "Mexico",
+        choice2: "Argentina",
+        choice3: "Peru",
+        choice4: "Compton",
+        answer: "Compton",
         id: 'g100',
         pointVal: 200
     },
     {
-        question: 'Who is the Beatles Drummer??',
+        question: 'Where is The Louvre Located??',
         answer: 'John Lennon',
         choice1: "Thriller",
         choice2: "Beat It",
@@ -106,7 +106,7 @@ const geographyCategory = [
         pointVal: 400
     },
     {
-        question: 'What is Beyonce Last Name??',
+        question: 'Where is Juniors Cheesecake Located??',
         answer: 'Knowles',
         choice1: "Thriller",
         choice2: "Beat It",
@@ -117,7 +117,7 @@ const geographyCategory = [
         pointVal: 600
     },
     {
-        question: 'What Boxer does Michael B. Jordan Play ??',
+        question: 'What country has the highest supply of Vibranium ??',
         choice1: "Thriller",
         choice2: "Beat It",
         choice3: "Cant Buy Me Love",
@@ -128,7 +128,7 @@ const geographyCategory = [
         pointVal: 800
     },
     {
-        question: 'Who is Isaiah Rashad ??',
+        question: 'Where is Kobe Bryant Originally From ??',
         choice1: "Thriller",
         choice2: "Beat It",
         choice3: "Cant Buy Me Love",
