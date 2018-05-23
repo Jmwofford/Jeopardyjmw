@@ -32,9 +32,9 @@ window.onload = function () {
 
 var checkWinCondition = function () {
     if (score >= 500) {
-        $('.superclassGrid').replaceWith('<img id="winning" src="break.gif" />')
+        $('.superclassGrid').replaceWith('<img id="winning" src="break.gif" />');
         $('superclassGrid').append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-        $('.superclassGrid').replaceWith('<img id="winning" src="break.gif" />')
+       
     }
 }
 
@@ -328,11 +328,12 @@ $('.e100').click(function () {
     const popup = $(this)
     $(this).html(`<h3>${entertainmentCategory[0].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
-    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
-
+    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+}, 30000);
 
 
     $('.isright').click(function () {
@@ -357,7 +358,7 @@ $('.e200').click(function () {
     const popup = $(this)
     $(this).html(`<h3>${entertainmentCategory[1].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
-    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
@@ -387,7 +388,7 @@ $('.e300').click(function () {
     const popup = $(this)
     $(this).html(`<h3>${entertainmentCategory[2].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
-    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
@@ -418,10 +419,12 @@ $('.e400').click(function () {
     const popup = $(this)
     $(this).html(`<h3>${entertainmentCategory[3].question}</h3>`)
     $(this).prepend('<img id="dailydub" src="dailydub.gif" />')
-    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="dailydub.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
+    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+}, 30000);
 
 
 
@@ -449,16 +452,18 @@ $('.e500').click(function () {
     const popup = $(this)
     $(this).html(`<h3>${entertainmentCategory[4].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
-    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
+    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+}, 30000);
 
 
 
     $('.isright').click(function () {
         console.log('this worked RIGHT');
-        rightAnswer();
+        rightAnswer(entertainmentCategory[4]);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
     })
@@ -466,7 +471,7 @@ $('.e500').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer();
+        wrongAnswer(entertainmentCategory[4]);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
 
     })
@@ -480,16 +485,18 @@ $('.g100').click(function () {
     const popup = $(this)
     $(this).html(`<h3>${geographyCategory[0].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
-    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
+    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+}, 30000);
 
 
 
     $('.isright').click(function () {
         console.log('this worked RIGHT');
-        rightAnswer();
+        rightAnswer(geographyCategory[0].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
     })
@@ -497,7 +504,7 @@ $('.g100').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer();
+        wrongAnswer(geographyCategory[0].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
     })
 })
@@ -509,16 +516,18 @@ $('.g200').click(function () {
     const popup = $(this)
     $(this).html(`<h3>${geographyCategory[1].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
-    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
+    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+}, 30000);
 
 
 
     $('.isright').click(function () {
         console.log('this worked RIGHT');
-        rightAnswer();
+        rightAnswer(geographyCategory[1].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
 
@@ -527,7 +536,7 @@ $('.g200').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer();
+        wrongAnswer(geographyCategory[1].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
 
     })
@@ -540,16 +549,18 @@ $('.g300').click(function () {
     const popup = $(this)
     $(this).html(`<h3>${geographyCategory[2].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
-    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
+    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+}, 30000);
 
 
 
     $('.isright').click(function () {
         console.log('this worked RIGHT');
-        rightAnswer();
+        rightAnswer(geographyCategory[2].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
 
@@ -558,7 +569,7 @@ $('.g300').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer();
+        wrongAnswer(geographyCategory[2].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
 
     })
@@ -571,16 +582,18 @@ $('.g400').click(function () {
     const popup = $(this)
     $(this).html(`<h3>${geographyCategory[3].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
-    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
+    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+}, 30000);
 
 
 
     $('.isright').click(function () {
         console.log('this worked RIGHT');
-        rightAnswer();
+        rightAnswer(geographyCategory[3].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
 
@@ -589,7 +602,7 @@ $('.g400').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer();
+        wrongAnswer(geographyCategory[3].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
 
     })
@@ -602,16 +615,18 @@ $('.g500').click(function () {
     const popup = $(this)
     $(this).html(`<h3>${geographyCategory[4].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
-    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
+    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+}, 30000);
 
 
 
     $('.isright').click(function () {
         console.log('this worked RIGHT');
-        rightAnswer();
+        rightAnswer(geographyCategory[4].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
 
@@ -620,12 +635,12 @@ $('.g500').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer();
+        wrongAnswer(geographyCategory[4].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
 
     })
 })
-// ================================================georgraphyCategory====================================
+// ================================================geographyCategory====================================
 $('.m100').click(function () {
     // const question = index.find((question) => {
     //     return question.id === 'q100'
@@ -634,16 +649,18 @@ $('.m100').click(function () {
     const popup = $(this)
     $(this).html(`<h3>${mathCategory[0].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
-    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
+    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+}, 30000);
 
 
 
     $('.isright').click(function () {
         console.log('this worked RIGHT');
-        rightAnswer();
+        rightAnswer(mathCategory[0].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
 
@@ -652,7 +669,7 @@ $('.m100').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer();
+        wrongAnswer(mathCategory[0].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
 
 
@@ -667,16 +684,18 @@ $('.m200').click(function () {
 
     $(this).html(`<h3>${mathCategory[1].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
-    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
+    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+}, 30000);
 
 
 
     $('.isright').click(function () {
         console.log('this worked RIGHT');
-        rightAnswer();
+        rightAnswer(mathCategory[1].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
 
@@ -685,7 +704,7 @@ $('.m200').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer();
+        wrongAnswer(mathCategory[1].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
 
     })
@@ -700,16 +719,18 @@ $('.m300').click(function () {
 
     $(this).html(`<h3>${mathCategory[2].question}</h3>`)
     $(this).prepend('<img id="dailydub" src="dailydub.gif" />')
-    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="dailydub.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
+    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+}, 30000);
 
 
 
     $('.isright').click(function () {
         console.log('this worked RIGHT');
-        rightAnswer();
+        rightAnswer(mathCategory[2].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
 
@@ -718,7 +739,7 @@ $('.m300').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer();
+        wrongAnswer(mathCategory[2].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
 
     })
@@ -733,16 +754,18 @@ $('.m400').click(function () {
 
     $(this).html(`<h3>${mathCategory[3].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
-    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
+    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+}, 30000);
 
 
 
     $('.isright').click(function () {
         console.log('this worked RIGHT');
-        rightAnswer();
+        rightAnswer(mathCategory[3].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
 
@@ -751,7 +774,7 @@ $('.m400').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer();
+        wrongAnswer(mathCategory[3].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
 
     })
@@ -765,16 +788,18 @@ $('.m500').click(function () {
 
     $(this).html(`<h3>${mathCategory[4].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
-    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
+    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+}, 30000);
 
 
 
     $('.isright').click(function () {
         console.log('this worked RIGHT');
-        rightAnswer();
+        rightAnswer(mathCategory[4].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
 
@@ -783,7 +808,7 @@ $('.m500').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer();
+        wrongAnswer(mathCategory[4].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
 
     })
@@ -798,16 +823,18 @@ $('.q100').click(function () {
 
     $(this).html(`<h3>${musicCategory[0].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
-    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
+    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+}, 30000);
 
 
 
     $('.isright').click(function () {
         console.log('this worked RIGHT');
-        rightAnswer();
+        rightAnswer(musicCategory[0].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
 
@@ -816,7 +843,7 @@ $('.q100').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer();
+        wrongAnswer(musicCategory[0].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
 
     })
@@ -830,16 +857,18 @@ $('.q200').click(function () {
 
     $(this).html(`<h3>${musicCategory[1].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
-    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
+    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+}, 30000);
 
 
 
     $('.isright').click(function () {
         console.log('this worked RIGHT');
-        rightAnswer();
+        rightAnswer(musicCategory[1].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
 
@@ -848,7 +877,7 @@ $('.q200').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer();
+        wrongAnswer(musicCategory[1].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
 
     })
@@ -862,16 +891,18 @@ $('.q300').click(function () {
 
     $(this).html(`<h3>${musicCategory[2].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
-    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
+    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+}, 30000);
 
 
 
     $('.isright').click(function () {
         console.log('this worked RIGHT');
-        rightAnswer();
+        rightAnswer(musicCategory[2].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
 
@@ -880,7 +911,7 @@ $('.q300').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer();
+        wrongAnswer(musicCategory[2].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
 
     })
@@ -894,16 +925,18 @@ $('.q400').click(function () {
 
     $(this).html(`<h3>${musicCategory[3].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
-    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
+    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+}, 30000);
 
 
 
     $('.isright').click(function () {
         console.log('this worked RIGHT');
-        rightAnswer();
+        rightAnswer(musicCategory[3].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
 
@@ -912,7 +945,7 @@ $('.q400').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer();
+        wrongAnswer(musicCategory[3].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
 
     })
@@ -926,16 +959,18 @@ $('.q500').click(function () {
 
     $(this).html(`<h3>${musicCategory[4].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
-    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
+    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+}, 30000);
 
 
 
     $('.isright').click(function () {
         console.log('this worked RIGHT');
-        rightAnswer();
+        rightAnswer(musicCategory[4].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
 
@@ -944,7 +979,7 @@ $('.q500').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer();
+        wrongAnswer(musicCategory[4].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
 
     })
@@ -957,18 +992,20 @@ $('.a100').click(function () {
 
     const popup = $(this)
 
-    $(this).html(`<h3>${entertainmentCategory[0].question}</h3>`)
+    $(this).html(`<h3>${artCategory[0].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
-    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
+    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+}, 30000);
 
 
 
     $('.isright').click(function () {
         console.log('this worked RIGHT');
-        rightAnswer();
+        rightAnswer(artCategory[0].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
 
@@ -977,7 +1014,7 @@ $('.a100').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer();
+        wrongAnswer(artCategory[0].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
 
     })
@@ -989,18 +1026,20 @@ $('.a200').click(function () {
 
     const popup = $(this)
 
-    $(this).html(`<h3>${entertainmentCategory[1].question}</h3>`)
+    $(this).html(`<h3>${artCategory[1].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
-    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
+    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+}, 30000);
 
 
 
     $('.isright').click(function () {
         console.log('this worked RIGHT');
-        rightAnswer();
+        rightAnswer(artCategory[1].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
     })
@@ -1008,7 +1047,7 @@ $('.a200').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer();
+        wrongAnswer(artCategory[1].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
 
     })
@@ -1020,18 +1059,20 @@ $('.a300').click(function () {
 
     const popup = $(this)
 
-    $(this).html(`<h3>${entertainmentCategory[2].question}</h3>`)
+    $(this).html(`<h3>${artCategory[2].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
-    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
+    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+}, 30000);
 
 
 
     $('.isright').click(function () {
         console.log('this worked RIGHT');
-        rightAnswer();
+        rightAnswer(artCategory[2].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
 
@@ -1040,7 +1081,7 @@ $('.a300').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer();
+        wrongAnswer(artCategory[2].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
 
     })
@@ -1053,18 +1094,20 @@ $('.a400').click(function () {
 
     const popup = $(this)
 
-    $(this).html(`<h3>${entertainmentCategory[3].question}</h3>`)
+    $(this).html(`<h3>${artCategory[3].question}</h3>`)
     $(this).prepend('<img id="dailydub" src="dailydub.gif" />')
-    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="dailydub.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
+    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+}, 30000);
 
 
 
     $('.isright').click(function () {
         console.log('this worked RIGHT');
-        rightAnswer();
+        rightAnswer(artCategory[3].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
 
@@ -1073,7 +1116,7 @@ $('.a400').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer();
+        wrongAnswer(artCategory[3].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
 
     })
@@ -1086,18 +1129,20 @@ $('.a500').click(function () {
 
     const popup = $(this)
 
-    $(this).html(`<h3>${entertainmentCategory[4].question}</h3>`)
+    $(this).html(`<h3>${artCategory[4].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
-    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
+    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+}, 30000);
 
 
 
     $('.isright').click(function () {
         console.log('this worked RIGHT');
-        rightAnswer();
+        rightAnswer(artCategory[4].pointVal);
 
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
@@ -1107,7 +1152,7 @@ $('.a500').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer();
+        wrongAnswer(artCategory[4].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
 
     })
