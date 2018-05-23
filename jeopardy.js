@@ -22,26 +22,22 @@ var rightAnswer = function (blockid) {
     console.log('positive score pushed.');
     console.log(score)
     $('#scorevalue').text(score)
-    console.log(blockid)
+    // console.log(blockid)
 }
 
 
 var tellMeIfChosenAnswerIsCorrectAnswer = function (chosen, correct) {
-    var isAnswerCorrect = false;
+   
     if (chosen === correct) {
-        isAnswerCorrect = true
+       rightAnswer()
     }
-    return isAnswerCorrect;
+    else {
+        wrongAnswer()
+    }
+    console.log('newWork')
+    // return isAnswerCorrect;
 }
 
-
-// const entertainment = {
-//     question: 'What is the Entertainment ??',
-//     answer: 'entertainment answer',
-//     id: 'e100',
-//     pointVal: 200
-
-// }
 
 const entertainmentCategory = [
     {
@@ -332,12 +328,6 @@ const artCategory = [
 
 
 
-
-
-
-
-
-
 window.onload= function(){
     $('#scorevalue').text(score)
 }
@@ -345,11 +335,11 @@ window.onload= function(){
 
 //
 //===================================================================//
-$('.e100').click(function() { 
+$('.e100').on('click',function() { 
     
     var chosen = "";
     
-    $(this).html(`<h3>${entertainmentCategory[0].question}</h3>`)
+    // $(this).html(`<h3>${entertainmentCategory[0].question}</h3>`)
     // .append('<button></button>') for each possible choice
     // make the innerHTML or text of this button = current choice whether 1 2 3 4
     // when this button is clicked, compare it's text or innerHTML to entertainmentCategory[0].correct
@@ -361,15 +351,27 @@ $('.e100').click(function() {
     // if not
     // call wrong answer
 
-   const currentChoice1= $(this).append('<button class="iswrong">wrongAnswer</button')
+//    const currentChoice1= $(this).append('<button class="iswrong1">wrongAnswer</button')
    // add to this button an on('click') that calls tellMeIfChosenAnswerIsCorrectAnswer('wrongAnswer', entertainmentCategory[0].correct)
+//    $('.iswrong1').click(function(){
 
-   const currentChoice2= $(this).append('<button class="iswrong">wrongAnswer</button')
+//         tellMeIfChosenAnswerIsCorrectAnswer(entertainmentCategory[0].choice1,entertainmentCategory.choice4)
+//    })
 
-   const currentChoice3=  $(this).append('<button class="iswrong">wrongAnswer</button')
 
-   const currentChoice4= $(this).append('<button class="isright">RightAnswer</button')
-    
+   const currentChoice2= $(this).append('<button class="iswrong2">wrongAnswer</button')
+$('.iswrong2').on('click',tellMeIfChosenAnswerIsCorrectAnswer(entertainmentCategory[0].choice2,entertainmentCategory[0].choice4))
+
+//    const currentChoice3=  $(this).append('<button class="iswrong3">wrongAnswer</button')
+//    $('.iswrong').click(function(){
+
+//     tellMeIfChosenAnswerIsCorrectAnswer(entertainmentCategory[0].choice3,entertainmentCategory.choice4)
+// })
+//    const currentChoice4= $(this).append('<button class="isright4">RightAnswer</button')
+//    $('.iswrong').click(function(){
+
+//     tellMeIfChosenAnswerIsCorrectAnswer(entertainmentCategory[0].choice4,entertainmentCategory.choice4)
+// })
 
 
 
@@ -380,16 +382,16 @@ $('.e100').click(function() {
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
-     $('.isright').click(function() {
-                console.log('this worked RIGHT');
-                        rightAnswer('.e100');
-                                    })
+//      $('.isright').click(function() {
+//                 console.log('this worked RIGHT');
+//                         rightAnswer('.e100');
+//                                     })
 
-$('.iswrong').click(function() {
+// $('.iswrong').click(function() {
 
-    console.log('this WORKED WRONG');
-    wrongAnswer();
-})
+//     console.log('this WORKED WRONG');
+//     wrongAnswer();
+// })
 })
 
 
