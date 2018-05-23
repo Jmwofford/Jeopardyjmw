@@ -94,7 +94,7 @@ $('.e100').click(function() {
     
     $(this).html(`<h3>${entertainmentCategory[0].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
-    $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
+    $(this).css({ font:'20px', position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">RightAnswer</button')
     $(this).append('<button class="iswrong">WrongAnswer</button')
@@ -104,12 +104,6 @@ $('.e100').click(function() {
 $('.isright').click(function() {
                 console.log('this worked RIGHT');
                         rightAnswer();
-
-if (rightAnswer()){
-
-    $(this).remove
-}
-
                                     })
 
 $('.iswrong').click(function() {
