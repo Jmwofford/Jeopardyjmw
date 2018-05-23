@@ -451,7 +451,7 @@ $('.e500').click(function () {
     })
 })
 // =======================================================entertainmentCategory========================
-$('.e100').click(function () {
+$('.g100').click(function () {
     // const question = index.find((question) => {
     //     return question.id === 'q100'
     // })
@@ -478,7 +478,7 @@ $('.e100').click(function () {
         wrongAnswer();
     })
 })
-$('.e200').click(function () {
+$('.g200').click(function () {
     // const question = index.find((question) => {
     //     return question.id === 'q100'
     // })
@@ -505,7 +505,7 @@ $('.e200').click(function () {
         wrongAnswer();
     })
 })
-$('.e300').click(function () {
+$('.g300').click(function () {
     // const question = index.find((question) => {
     //     return question.id === 'q100'
     // })
@@ -532,7 +532,7 @@ $('.e300').click(function () {
         wrongAnswer();
     })
 })
-$('.e400').click(function () {
+$('.g400').click(function () {
     // const question = index.find((question) => {
     //     return question.id === 'q100'
     // })
@@ -559,7 +559,7 @@ $('.e400').click(function () {
         wrongAnswer();
     })
 })
-$('.e500').click(function () {
+$('.g500').click(function () {
     // const question = index.find((question) => {
     //     return question.id === 'q100'
     // })
@@ -588,7 +588,7 @@ $('.e500').click(function () {
 })
 // =========================================================================================georgraphyCategory====================================
 
-$('.e100').click(function () {
+$('.m100').click(function () {
     // const question = index.find((question) => {
     //     return question.id === 'q100'
     // })
@@ -615,7 +615,7 @@ $('.e100').click(function () {
         wrongAnswer();
     })
 })
-$('.e200').click(function () {
+$('.m200').click(function () {
     // const question = index.find((question) => {
     //     return question.id === 'q100'
     // })
@@ -642,7 +642,7 @@ $('.e200').click(function () {
         wrongAnswer();
     })
 })
-$('.e300').click(function () {
+$('.m300').click(function () {
     // const question = index.find((question) => {
     //     return question.id === 'q100'
     // })
@@ -669,7 +669,7 @@ $('.e300').click(function () {
         wrongAnswer();
     })
 })
-$('.e400').click(function () {
+$('.m400').click(function () {
     // const question = index.find((question) => {
     //     return question.id === 'q100'
     // })
@@ -696,7 +696,7 @@ $('.e400').click(function () {
         wrongAnswer();
     })
 })
-$('.e500').click(function () {
+$('.m500').click(function () {
     // const question = index.find((question) => {
     //     return question.id === 'q100'
     // })
@@ -725,7 +725,7 @@ $('.e500').click(function () {
 })
 // ========================================================================================MathCategory===========================================
 
-$('.e100').click(function () {
+$('.q100').click(function () {
     // const question = index.find((question) => {
     //     return question.id === 'q100'
     // })
@@ -752,7 +752,7 @@ $('.e100').click(function () {
         wrongAnswer();
     })
 })
-$('.e200').click(function () {
+$('.q200').click(function () {
     // const question = index.find((question) => {
     //     return question.id === 'q100'
     // })
@@ -779,7 +779,7 @@ $('.e200').click(function () {
         wrongAnswer();
     })
 })
-$('.e300').click(function () {
+$('.q300').click(function () {
     // const question = index.find((question) => {
     //     return question.id === 'q100'
     // })
@@ -806,7 +806,7 @@ $('.e300').click(function () {
         wrongAnswer();
     })
 })
-$('.e400').click(function () {
+$('.q400').click(function () {
     // const question = index.find((question) => {
     //     return question.id === 'q100'
     // })
@@ -833,7 +833,7 @@ $('.e400').click(function () {
         wrongAnswer();
     })
 })
-$('.e500').click(function () {
+$('.q500').click(function () {
     // const question = index.find((question) => {
     //     return question.id === 'q100'
     // })
@@ -863,7 +863,7 @@ $('.e500').click(function () {
 
 // =======================================================================================================musicCategory==========================
 
-$('.e100').click(function () {
+$('.a100').click(function () {
     // const question = index.find((question) => {
     //     return question.id === 'q100'
     // })
@@ -890,7 +890,7 @@ $('.e100').click(function () {
         wrongAnswer();
     })
 })
-$('.e200').click(function () {
+$('.a200').click(function () {
     // const question = index.find((question) => {
     //     return question.id === 'q100'
     // })
@@ -917,7 +917,7 @@ $('.e200').click(function () {
         wrongAnswer();
     })
 })
-$('.e300').click(function () {
+$('.a300').click(function () {
     // const question = index.find((question) => {
     //     return question.id === 'q100'
     // })
@@ -944,7 +944,7 @@ $('.e300').click(function () {
         wrongAnswer();
     })
 })
-$('.e400').click(function () {
+$('.a400').click(function () {
     // const question = index.find((question) => {
     //     return question.id === 'q100'
     // })
@@ -971,7 +971,7 @@ $('.e400').click(function () {
         wrongAnswer();
     })
 })
-$('.e500').click(function () {
+$('.a500').click(function () {
     // const question = index.find((question) => {
     //     return question.id === 'q100'
     // })
