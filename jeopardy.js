@@ -8,7 +8,7 @@ var score=0;
 
 var wrongAnswer = function(blockid) {
         
-        score -= entertainment.pointVal;
+        score -= entertainmentCategory.pointVal;
         console.log('negative score pushed.');
         console.log(score)
         $('#scorevalue').text(score)
@@ -18,12 +18,13 @@ var wrongAnswer = function(blockid) {
 
 var rightAnswer = function (blockid) {
   
-    score += entertainment.pointVal;
+    score += entertainmentCategory.pointVal;
     console.log('positive score pushed.');
     console.log(score)
     $('#scorevalue').text(score)
     console.log(blockid)
 }
+
 
 var tellMeIfChosenAnswerIsCorrectAnswer = function (chosen, correct) {
     var isAnswerCorrect = false;
@@ -54,27 +55,274 @@ const entertainmentCategory = [
         pointVal: 200 
     },
     {
-        question: 'What is the Entertainment ??',
-        answer: 'entertainment answer',
+        question: 'Who is the Beatles Drummer??',
+        answer: 'John Lennon',
+        choice1: "Thriller",
+        choice2: "Beat It",
+        choice3: "Cant Buy Me Love",
+        choice4: "Man in Mirror",
+        answer: "Man in Mirror",
         id: 'e200',
         pointVal: 400
     },
     {
-        question: 'What is the Entertainment ??',
-        answer: 'entertainment answer',
+        question: 'What is Beyonce Last Name??',
+        answer: 'Knowles',
+        choice1: "Thriller",
+        choice2: "Beat It",
+        choice3: "Cant Buy Me Love",
+        choice4: "Man in Mirror",
+        answer: "Man in Mirror",
         id: 'e300',
         pointVal: 600
     },
     {
-        question: 'What is the Entertainment ??',
-        answer: 'entertainment answer',
+        question: 'What Boxer does Michael B. Jordan Play ??',
+        choice1: "Thriller",
+        choice2: "Beat It",
+        choice3: "Cant Buy Me Love",
+        choice4: "Man in Mirror",
+        answer: "Man in Mirror",
+        answer: 'Creed',
         id: 'e400',
         pointVal: 800
     },
     {
-        question: 'What is the Entertainment ??',
-        answer: 'entertainment answer',
+        question: 'Who is Isaiah Rashad ??',
+        choice1: "Thriller",
+        choice2: "Beat It",
+        choice3: "Cant Buy Me Love",
+        choice4: "Man in Mirror",
+        answer: "Man in Mirror",
+        answer: 'TDE artist',
+        id: 'e500',
+        pointVal: 1000
+    }
+]
+const geographyCategory = [
+    {
+        question: 'What is Michael Jacksons Most Famous Song??',
+        choice1: "Thriller",
+        choice2: "Beat It",
+        choice3: "Cant Buy Me Love",
+        choice4: "Man in Mirror",
+        answer: "Man in Mirror",
+        id: 'g100',
+        pointVal: 200 
+    },
+    {
+        question: 'Who is the Beatles Drummer??',
+        answer: 'John Lennon',
+        choice1: "Thriller",
+        choice2: "Beat It",
+        choice3: "Cant Buy Me Love",
+        choice4: "Man in Mirror",
+        answer: "Man in Mirror",
+        id: 'g200',
+        pointVal: 400
+    },
+    {
+        question: 'What is Beyonce Last Name??',
+        answer: 'Knowles',
+        choice1: "Thriller",
+        choice2: "Beat It",
+        choice3: "Cant Buy Me Love",
+        choice4: "Man in Mirror",
+        answer: "Man in Mirror",
+        id: 'g300',
+        pointVal: 600
+    },
+    {
+        question: 'What Boxer does Michael B. Jordan Play ??',
+        choice1: "Thriller",
+        choice2: "Beat It",
+        choice3: "Cant Buy Me Love",
+        choice4: "Man in Mirror",
+        answer: "Man in Mirror",
+        answer: 'Creed',
+        id: 'g400',
+        pointVal: 800
+    },
+    {
+        question: 'Who is Isaiah Rashad ??',
+        choice1: "Thriller",
+        choice2: "Beat It",
+        choice3: "Cant Buy Me Love",
+        choice4: "Man in Mirror",
+        answer: "Man in Mirror",
+        answer: 'TDE artist',
+        id: 'g500',
+        pointVal: 1000
+    }
+]
+
+const mathCategory = [
+    {
+        question: 'What is Michael Jacksons Most Famous Song??',
+        choice1: "Thriller",
+        choice2: "Beat It",
+        choice3: "Cant Buy Me Love",
+        choice4: "Man in Mirror",
+        answer: "Man in Mirror",
+        id: 'm100',
+        pointVal: 200 
+    },
+    {
+        question: 'Who is the Beatles Drummer??',
+        answer: 'John Lennon',
+        choice1: "Thriller",
+        choice2: "Beat It",
+        choice3: "Cant Buy Me Love",
+        choice4: "Man in Mirror",
+        answer: "Man in Mirror",
+        id: 'e300',
+        pointVal: 400
+    },
+    {
+        question: 'What is Beyonce Last Name??',
+        answer: 'Knowles',
+        choice1: "Thriller",
+        choice2: "Beat It",
+        choice3: "Cant Buy Me Love",
+        choice4: "Man in Mirror",
+        answer: "Man in Mirror",
         id: 'e400',
+        pointVal: 600
+    },
+    {
+        question: 'What Boxer does Michael B. Jordan Play ??',
+        choice1: "Thriller",
+        choice2: "Beat It",
+        choice3: "Cant Buy Me Love",
+        choice4: "Man in Mirror",
+        answer: "Man in Mirror",
+        answer: 'Creed',
+        id: 'e400',
+        pointVal: 800
+    },
+    {
+        question: 'Who is Isaiah Rashad ??',
+        choice1: "Thriller",
+        choice2: "Beat It",
+        choice3: "Cant Buy Me Love",
+        choice4: "Man in Mirror",
+        answer: "Man in Mirror",
+        answer: 'TDE artist',
+        id: 'e500',
+        pointVal: 1000
+    }
+]
+
+const musicCategory = [
+    {
+        question: 'What is Michael Jacksons Most Famous Song??',
+        choice1: "Thriller",
+        choice2: "Beat It",
+        choice3: "Cant Buy Me Love",
+        choice4: "Man in Mirror",
+        answer: "Man in Mirror",
+        id: 'e100',
+        pointVal: 200 
+    },
+    {
+        question: 'Who is the Beatles Drummer??',
+        answer: 'John Lennon',
+        choice1: "Thriller",
+        choice2: "Beat It",
+        choice3: "Cant Buy Me Love",
+        choice4: "Man in Mirror",
+        answer: "Man in Mirror",
+        id: 'e300',
+        pointVal: 400
+    },
+    {
+        question: 'What is Beyonce Last Name??',
+        answer: 'Knowles',
+        choice1: "Thriller",
+        choice2: "Beat It",
+        choice3: "Cant Buy Me Love",
+        choice4: "Man in Mirror",
+        answer: "Man in Mirror",
+        id: 'e400',
+        pointVal: 600
+    },
+    {
+        question: 'What Boxer does Michael B. Jordan Play ??',
+        choice1: "Thriller",
+        choice2: "Beat It",
+        choice3: "Cant Buy Me Love",
+        choice4: "Man in Mirror",
+        answer: "Man in Mirror",
+        answer: 'Creed',
+        id: 'e400',
+        pointVal: 800
+    },
+    {
+        question: 'Who is Isaiah Rashad ??',
+        choice1: "Thriller",
+        choice2: "Beat It",
+        choice3: "Cant Buy Me Love",
+        choice4: "Man in Mirror",
+        answer: "Man in Mirror",
+        answer: 'TDE artist',
+        id: 'e500',
+        pointVal: 1000
+    }
+]
+
+const artCategory = [
+    {
+        question: 'What is Michael Jacksons Most Famous Song??',
+        choice1: "Thriller",
+        choice2: "Beat It",
+        choice3: "Cant Buy Me Love",
+        choice4: "Man in Mirror",
+        answer: "Man in Mirror",
+        id: 'e100',
+        pointVal: 200 
+    },
+    {
+        question: 'Who is the Beatles Drummer??',
+        answer: 'John Lennon',
+        choice1: "Thriller",
+        choice2: "Beat It",
+        choice3: "Cant Buy Me Love",
+        choice4: "Man in Mirror",
+        answer: "Man in Mirror",
+        id: 'e300',
+        pointVal: 400
+    },
+    {
+        question: 'What is Beyonce Last Name??',
+        answer: 'Knowles',
+        choice1: "Thriller",
+        choice2: "Beat It",
+        choice3: "Cant Buy Me Love",
+        choice4: "Man in Mirror",
+        answer: "Man in Mirror",
+        id: 'e400',
+        pointVal: 600
+    },
+    {
+        question: 'What Boxer does Michael B. Jordan Play ??',
+        choice1: "Thriller",
+        choice2: "Beat It",
+        choice3: "Cant Buy Me Love",
+        choice4: "Man in Mirror",
+        answer: "Man in Mirror",
+        answer: 'Creed',
+        id: 'e400',
+        pointVal: 800
+    },
+    {
+        question: 'Who is Isaiah Rashad ??',
+        choice1: "Thriller",
+        choice2: "Beat It",
+        choice3: "Cant Buy Me Love",
+        choice4: "Man in Mirror",
+        answer: "Man in Mirror",
+        answer: 'TDE artist',
+        id: 'e500',
         pointVal: 1000
     }
 ]
@@ -83,30 +331,6 @@ const entertainmentCategory = [
 
 
 
-const geography = {
-    question: 'What is Geography ??',
-    answer: 'geography answer',
-    id: 'g100',
-    pointVal: 200
-}
-const math = {
-    question: 'What is Math ??',
-    answer: 'math answer',
-    id: 'm100',
-    pointVal: 200
-}
-const music = {
-    question: 'What is Music ??',
-    answer: 'music answer',
-    id: 'q100',
-    pointVal: 200
-}
-const art = {
-    question: 'What is art ??',
-    answer: 'art answer',
-    id: 'a100',
-    pointVal: 200
-}
 
 
 
@@ -137,10 +361,14 @@ $('.e100').click(function() {
     // if not
     // call wrong answer
 
-    $(this).append('<button class="iswrong">wrongAnswer</button')
-    $(this).append('<button class="iswrong">wrongAnswer</button')
-    $(this).append('<button class="iswrong">wrongAnswer</button')
-    $(this).append('<button class="isright">RightAnswer</button')
+   const currentChoice1= $(this).append('<button class="iswrong">wrongAnswer</button')
+   // add to this button an on('click') that calls tellMeIfChosenAnswerIsCorrectAnswer('wrongAnswer', entertainmentCategory[0].correct)
+
+   const currentChoice2= $(this).append('<button class="iswrong">wrongAnswer</button')
+
+   const currentChoice3=  $(this).append('<button class="iswrong">wrongAnswer</button')
+
+   const currentChoice4= $(this).append('<button class="isright">RightAnswer</button')
     
 
 
@@ -276,13 +504,32 @@ $('.iswrong').click(function() {
 //===================================================================//
 
 // A category would be an array of question objects
+
+
 // A question object would have the actual question as a string, the choices for the user to select as strings, the correct choice as it's own separate string that matches exactly one of the choices, how many points the question is worth, and the id of the question
+
+
+
+
+
 // for each category, you would create a block and give it:
 // the question to show as it's own element
+
+
+
 // a way to display how many points it is worth
+
+
 // a button for each choice
+
+
+
 // each button would have an onClick function which would tell you if that button's associated value (in the choices for the question) is equal to the correct answer for that question
+
+
 // if that value is true
+
+
 // call your rightAnswer function
 // else
 // call your wrongAnswer function
