@@ -315,7 +315,7 @@ $('.e100').click(function () {
     // })
 
     const popup = $(this)
-    $(this).html(`<h3>${entertainmentCategory[1].question}</h3>`)
+    $(this).html(`<h3>${entertainmentCategory[0].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
@@ -344,7 +344,7 @@ $('.e200').click(function () {
     // })
 
     const popup = $(this)
-    $(this).html(`<h3>${entertainmentCategory[2].question}</h3>`)
+    $(this).html(`<h3>${entertainmentCategory[1].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
@@ -374,7 +374,7 @@ $('.e300').click(function () {
     // })
 
     const popup = $(this)
-    $(this).html(`<h3>${entertainmentCategory[3].question}</h3>`)
+    $(this).html(`<h3>${entertainmentCategory[2].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
@@ -405,7 +405,7 @@ $('.e400').click(function () {
     // })
 
     const popup = $(this)
-    $(this).html(`<h3>${entertainmentCategory[4].question}</h3>`)
+    $(this).html(`<h3>${entertainmentCategory[3].question}</h3>`)
     $(this).prepend('<img id="dailydub" src="dailydub.gif" />')
     $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="dailydub.mp3" type="audio/mp3">');
@@ -436,7 +436,7 @@ $('.e500').click(function () {
     // })
 
     const popup = $(this)
-    $(this).html(`<h3>${entertainmentCategory[5].question}</h3>`)
+    $(this).html(`<h3>${entertainmentCategory[4].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
