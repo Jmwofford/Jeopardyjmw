@@ -654,7 +654,7 @@ $('.m200').click(function () {
 
     const popup = $(this)
 
-    $(this).html(`<h3>${mathCategory[].question}</h3>`)
+    $(this).html(`<h3>${mathCategory[1].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
@@ -785,7 +785,7 @@ $('.q100').click(function () {
 
     const popup = $(this)
 
-    $(this).html(`<h3>${musicCategory[1].question}</h3>`)
+    $(this).html(`<h3>${musicCategory[0].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
@@ -817,7 +817,7 @@ $('.q200').click(function () {
 
     const popup = $(this)
 
-    $(this).html(`<h3>${musicCategory[2].question}</h3>`)
+    $(this).html(`<h3>${musicCategory[1].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
@@ -849,7 +849,7 @@ $('.q300').click(function () {
 
     const popup = $(this)
 
-    $(this).html(`<h3>${musicCategory[3].question}</h3>`)
+    $(this).html(`<h3>${musicCategory[2].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
@@ -881,7 +881,7 @@ $('.q400').click(function () {
 
     const popup = $(this)
 
-    $(this).html(`<h3>${musicCategory[4].question}</h3>`)
+    $(this).html(`<h3>${musicCategory[3].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
@@ -913,7 +913,7 @@ $('.q500').click(function () {
 
     const popup = $(this)
 
-    $(this).html(`<h3>${musicCategory[5].question}</h3>`)
+    $(this).html(`<h3>${musicCategory[4].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
@@ -946,7 +946,7 @@ $('.a100').click(function () {
 
     const popup = $(this)
 
-    $(this).html(`<h3>${entertainmentCategory[1].question}</h3>`)
+    $(this).html(`<h3>${entertainmentCategory[0].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
@@ -978,7 +978,7 @@ $('.a200').click(function () {
 
     const popup = $(this)
 
-    $(this).html(`<h3>${entertainmentCategory[2].question}</h3>`)
+    $(this).html(`<h3>${entertainmentCategory[1].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
@@ -1009,7 +1009,7 @@ $('.a300').click(function () {
 
     const popup = $(this)
 
-    $(this).html(`<h3>${entertainmentCategory[3].question}</h3>`)
+    $(this).html(`<h3>${entertainmentCategory[2].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
@@ -1042,7 +1042,7 @@ $('.a400').click(function () {
 
     const popup = $(this)
 
-    $(this).html(`<h3>${entertainmentCategory[4].question}</h3>`)
+    $(this).html(`<h3>${entertainmentCategory[3].question}</h3>`)
     $(this).prepend('<img id="dailydub" src="dailydub.gif" />')
     $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="dailydub.mp3" type="audio/mp3">');
@@ -1075,7 +1075,7 @@ $('.a500').click(function () {
 
     const popup = $(this)
 
-    $(this).html(`<h3>${entertainmentCategory[5].question}</h3>`)
+    $(this).html(`<h3>${entertainmentCategory[4].question}</h3>`)
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '600px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
