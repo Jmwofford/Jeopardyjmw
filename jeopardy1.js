@@ -264,7 +264,7 @@ const artCategory = [
         choice3: "Cant Buy Me Love",
         choice4: "Man in Mirror",
         answer: "Man in Mirror",
-        id: 'e100',
+        id: 'a100',
         pointVal: 200
     },
     {
@@ -275,7 +275,7 @@ const artCategory = [
         choice3: "Cant Buy Me Love",
         choice4: "Man in Mirror",
         answer: "Man in Mirror",
-        id: 'e200',
+        id: 'a200',
         pointVal: 400
     },
     {
@@ -286,7 +286,7 @@ const artCategory = [
         choice3: "Cant Buy Me Love",
         choice4: "Man in Mirror",
         answer: "Man in Mirror",
-        id: 'e300',
+        id: 'a300',
         pointVal: 600
     },
     {
@@ -297,7 +297,7 @@ const artCategory = [
         choice4: "Man in Mirror",
         answer: "Man in Mirror",
         answer: 'Creed',
-        id: 'e400',
+        id: 'a400',
         pointVal: 800
     },
     {
@@ -308,7 +308,7 @@ const artCategory = [
         choice4: "Man in Mirror",
         answer: "Man in Mirror",
         answer: 'TDE artist',
-        id: 'e500',
+        id: 'a500',
         pointVal: 1000
     }
 ]
