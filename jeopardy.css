@@ -136,6 +136,10 @@ body{
 .parent{
     display: flex;
 }
+
+.parent:hover {
+    cursor: pointer;
+}
 .superclassGrid{
    margin-left: 300px;
    margin-top:30px;
@@ -272,4 +276,5 @@ h3{
     margin-left:400px;
     position:absolute;
     animation: plugwalk 20s ease 0s infinite;
+    transition:5s;
 }

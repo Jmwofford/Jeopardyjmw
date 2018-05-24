@@ -31,10 +31,11 @@ window.onload = function () {
 }
 
 var checkWinCondition = function () {
-    if (score >= 3500) {     
-        $('.score').text('<h1 class="winprompt">YOU WIN</h1>')
+    if (score >= 4500) {     
+        $('#j').replaceWith('<h1 class="winprompt">YOU WIN</h1>')
         $('.superclassGrid').replaceWith('<img id="winning" src="break.gif" />');
         $('.score').replaceWith('<audio autoplay src="ricflair.mp3" type="audio/mp3">');
+        $('#o').replaceWith('<h1 class="winprompt">YOU WIN</h1>')
     }
 }
 
@@ -878,8 +879,8 @@ $('.a100').click(function () {
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">Davinci</button')
-    $(this).append('<button class="iswrong">Michaelangelo</button')
+    $(this).append('<button class="isright">Michaelangelo</button')
+    $(this).append('<button class="iswrong">Davinci</button')
     setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
 }, 30000);
 
