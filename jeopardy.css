@@ -223,7 +223,7 @@ body{
     width:110px;
 }
 h3{
-    font-size: 45px;
+    font-size: 25px;
 }
 #winning{
     height:250px;
@@ -264,4 +264,12 @@ h3{
     height:50px;
     width:100px;
     border-radius: 50%;
+}
+.winprompt{
+    font-size: 120px;
+    color:green;
+    font-family:'Courier New', Courier, monospace;
+    margin-left:400px;
+    position:absolute;
+    animation: plugwalk 20s ease 0s infinite;
 }

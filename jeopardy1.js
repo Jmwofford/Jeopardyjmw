@@ -31,64 +31,40 @@ window.onload = function () {
 }
 
 var checkWinCondition = function () {
-    if (score >= 500) {
+    if (score >= 3500) {     
+        $('.score').text('<h1 class="winprompt">YOU WIN</h1>')
         $('.superclassGrid').replaceWith('<img id="winning" src="break.gif" />');
-        $('superclassGrid').append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-       
+        $('.score').replaceWith('<audio autoplay src="ricflair.mp3" type="audio/mp3">');
     }
 }
 
 const entertainmentCategory = [
     {
-        question: 'What is Michael Jacksons Most Famous Song??',
-        choice1: "Thriller",
-        choice2: "Beat It",
-        choice3: "Cant Buy Me Love",
-        choice4: "Man in Mirror",
-        answer: "Man in Mirror",
+        question: 'This girl was NOT Michael Jacksons Lover ??',
+        answer: "Billie Jean",
         id: 'e100',
         pointVal: 200
     },
     {
-        question: 'Who is the Beatles Drummer??',
-        answer: 'John Lennon',
-        choice1: "Thriller",
-        choice2: "Beat It",
-        choice3: "Cant Buy Me Love",
-        choice4: "Man in Mirror",
-        answer: "Man in Mirror",
+        question: 'This local artist was known for putting the STANKONIA??',
+        answer: "Outkast",
         id: 'e200',
         pointVal: 400
     },
     {
-        question: 'What is Beyonce Last Name??',
-        answer: 'Knowles',
-        choice1: "Thriller",
-        choice2: "Beat It",
-        choice3: "Cant Buy Me Love",
-        choice4: "Man in Mirror",
-        answer: "Man in Mirror",
+        question: 'Which group of Jim Henson puppets first appeareed on American television in Sesame Street?',
+        answer: "Muppets",
         id: 'e300',
         pointVal: 600
     },
     {
-        question: 'What Boxer does Michael B. Jordan Play ??',
-        choice1: "Thriller",
-        choice2: "Beat It",
-        choice3: "Cant Buy Me Love",
-        choice4: "Man in Mirror",
-        answer: "Man in Mirror",
-        answer: 'Creed',
+        question: 'This Wakanda Warrior has a bite worse than his BARK??',
+        answer: 'Mbaku',
         id: 'e400',
         pointVal: 800
     },
     {
-        question: 'Who is Isaiah Rashad ??',
-        choice1: "Thriller",
-        choice2: "Beat It",
-        choice3: "Cant Buy Me Love",
-        choice4: "Man in Mirror",
-        answer: "Man in Mirror",
+        question: 'This music artist played "Birdie" in Above the Rim ??',
         answer: 'TDE artist',
         id: 'e500',
         pointVal: 1000
@@ -96,223 +72,129 @@ const entertainmentCategory = [
 ]
 const geographyCategory = [
     {
-        question: 'Where is Mount Vesuvius Located??',
-        choice1: "Mexico",
-        choice2: "Argentina",
-        choice3: "Peru",
-        choice4: "Compton",
-        answer: "Compton",
+        question: 'What is the driest place on Earth??',
+        answer: "Mcmurdo, Antartica",
         id: 'g100',
         pointVal: 200
     },
     {
-        question: 'Where is The Louvre Located??',
-        answer: 'John Lennon',
-        choice1: "Thriller",
-        choice2: "Beat It",
-        choice3: "Cant Buy Me Love",
-        choice4: "Man in Mirror",
-        answer: "Man in Mirror",
+        question: 'What country has the most natural lakes???',
+        answer: "Canada",
         id: 'g200',
         pointVal: 400
     },
     {
-        question: 'Where is Juniors Cheesecake Located??',
-        answer: 'Knowles',
-        choice1: "Thriller",
-        choice2: "Beat It",
-        choice3: "Cant Buy Me Love",
-        choice4: "Man in Mirror",
-        answer: "Man in Mirror",
+        question: 'What razor-thin country accounts for more than half of the western coastline of South America???',
+        answer: 'Chile',
         id: 'g300',
         pointVal: 600
     },
     {
         question: 'What country has the highest supply of Vibranium ??',
-        choice1: "Thriller",
-        choice2: "Beat It",
-        choice3: "Cant Buy Me Love",
-        choice4: "Man in Mirror",
-        answer: "Man in Mirror",
-        answer: 'Creed',
+        answer: 'Wakanda',
         id: 'g400',
         pointVal: 800
     },
     {
         question: 'Where is Kobe Bryant Originally From ??',
-        choice1: "Thriller",
-        choice2: "Beat It",
-        choice3: "Cant Buy Me Love",
-        choice4: "Man in Mirror",
-        answer: "Man in Mirror",
-        answer: 'TDE artist',
+        answer: 'Italy',
         id: 'g500',
         pointVal: 1000
     }
 ]
 const mathCategory = [
     {
-        question: 'What is Michael Jacksons Most Famous Song??',
-        choice1: "Thriller",
-        choice2: "Beat It",
-        choice3: "Cant Buy Me Love",
-        choice4: "Man in Mirror",
-        answer: "Man in Mirror",
+        question: 'How many 90degree angles make up an equilateral triangle??',
+        answer: "0",
         id: 'm100',
         pointVal: 200
     },
     {
-        question: 'Who is the Beatles Drummer??',
-        answer: 'John Lennon',
-        choice1: "Thriller",
-        choice2: "Beat It",
-        choice3: "Cant Buy Me Love",
-        choice4: "Man in Mirror",
-        answer: "Man in Mirror",
+        question: 'What number has the same numbers of Letters, as its meaning??',
+        answer: '4',
         id: 'm200',
         pointVal: 400
     },
     {
-        question: 'What is Beyonce Last Name??',
-        answer: 'Knowles',
-        choice1: "Thriller",
-        choice2: "Beat It",
-        choice3: "Cant Buy Me Love",
-        choice4: "Man in Mirror",
-        answer: "Man in Mirror",
+        question: 'What number is the first Number to use the letter "A" in its spelling??',
+        answer: '1000',
         id: 'm300',
         pointVal: 600
     },
     {
-        question: 'What Boxer does Michael B. Jordan Play ??',
-        choice1: "Thriller",
-        choice2: "Beat It",
-        choice3: "Cant Buy Me Love",
-        choice4: "Man in Mirror",
-        answer: "Man in Mirror",
-        answer: 'Creed',
+        question: 'How much many pentagonal sides does a dodechdron have??',
+        answer: '12',
         id: 'm400',
         pointVal: 800
     },
     {
-        question: 'Who is Isaiah Rashad ??',
-        choice1: "Thriller",
-        choice2: "Beat It",
-        choice3: "Cant Buy Me Love",
-        choice4: "Man in Mirror",
-        answer: "Man in Mirror",
-        answer: 'TDE artist',
+        question: '111111111 x 111111111 = ??',
+        answer: '12345678987654321',
         id: 'm500',
         pointVal: 1000
     }
 ]
 const musicCategory = [
     {
-        question: 'What is Michael Jacksons Most Famous Song??',
-        choice1: "Thriller",
-        choice2: "Beat It",
-        choice3: "Cant Buy Me Love",
-        choice4: "Man in Mirror",
-        answer: "Man in Mirror",
+        question: 'What artist holds the world record for most words in a hit single???',
+        answer: "Eminem",
         id: 'q100',
         pointVal: 200
     },
     {
-        question: 'Who is the Beatles Drummer??',
-        answer: 'John Lennon',
-        choice1: "Thriller",
-        choice2: "Beat It",
-        choice3: "Cant Buy Me Love",
-        choice4: "Man in Mirror",
-        answer: "Man in Mirror",
+        question: 'How many different instruments did Prince play on his debut album??',
+        answer: "27",
         id: 'q200',
         pointVal: 400
     },
     {
-        question: 'What is Beyonce Last Name??',
-        answer: 'Knowles',
-        choice1: "Thriller",
-        choice2: "Beat It",
-        choice3: "Cant Buy Me Love",
-        choice4: "Man in Mirror",
-        answer: "Man in Mirror",
+        question: 'What are piano keys made out of???',
+        answer: "Plastic",
         id: 'q300',
         pointVal: 600
     },
     {
-        question: 'What Boxer does Michael B. Jordan Play ??',
-        choice1: "Thriller",
-        choice2: "Beat It",
-        choice3: "Cant Buy Me Love",
-        choice4: "Man in Mirror",
-        answer: "Man in Mirror",
-        answer: 'Creed',
+        question: 'What was Bob Marleys song I Shot the Sheriff really about???',
+        answer:'birthcontrol',
         id: 'q400',
         pointVal: 800
     },
     {
-        question: 'Who is Isaiah Rashad ??',
-        choice1: "Thriller",
-        choice2: "Beat It",
-        choice3: "Cant Buy Me Love",
-        choice4: "Man in Mirror",
-        answer: "Man in Mirror",
-        answer: 'TDE artist',
+        question: 'Who is Mike Jones ??',
+        answer: 'Who',
         id: 'q500',
         pointVal: 1000
     }
 ]
 const artCategory = [
     {
-        question: 'What is Michael Jacksons Most Famous Song??',
-        choice1: "Thriller",
-        choice2: "Beat It",
-        choice3: "Cant Buy Me Love",
-        choice4: "Man in Mirror",
-        answer: "Man in Mirror",
+        question: 'Who Painted the Sisteen Chapel??',
+        answer: "Davinci",
         id: 'a100',
         pointVal: 200
     },
     {
-        question: 'Who is the Beatles Drummer??',
+        question: 'What Contemporary Artist cut off his ear ??',
         answer: 'John Lennon',
-        choice1: "Thriller",
-        choice2: "Beat It",
-        choice3: "Cant Buy Me Love",
-        choice4: "Man in Mirror",
+        
         answer: "Man in Mirror",
         id: 'a200',
         pointVal: 400
     },
     {
-        question: 'What is Beyonce Last Name??',
-        answer: 'Knowles',
-        choice1: "Thriller",
-        choice2: "Beat It",
-        choice3: "Cant Buy Me Love",
-        choice4: "Man in Mirror",
+        question: 'How Many Members were in the Original Destinys Child??',
         answer: "Man in Mirror",
         id: 'a300',
         pointVal: 600
     },
     {
-        question: 'What Boxer does Michael B. Jordan Play ??',
-        choice1: "Thriller",
-        choice2: "Beat It",
-        choice3: "Cant Buy Me Love",
-        choice4: "Man in Mirror",
-        answer: "Man in Mirror",
-        answer: 'Creed',
+        question: 'What was Van Gohs Most Famous Art Piece ??',
+        answer: 'Stary Night',
         id: 'a400',
         pointVal: 800
     },
     {
-        question: 'Who is Isaiah Rashad ??',
-        choice1: "Thriller",
-        choice2: "Beat It",
-        choice3: "Cant Buy Me Love",
-        choice4: "Man in Mirror",
-        answer: "Man in Mirror",
+        question: 'How many colors are in the Original Crayon Box ??',
         answer: 'TDE artist',
         id: 'a500',
         pointVal: 1000
@@ -330,8 +212,8 @@ $('.e100').click(function () {
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">RightAnswer</button')
-    $(this).append('<button class="iswrong">WrongAnswer</button')
+    $(this).append('<button class="isright">Billie Jean</button')
+    $(this).append('<button class="iswrong">Bonita AppleBum</button')
     setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
 }, 30000);
 
@@ -360,8 +242,8 @@ $('.e200').click(function () {
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">RightAnswer</button')
-    $(this).append('<button class="iswrong">WrongAnswer</button')
+    $(this).append('<button class="isright">Outkast</button')
+    $(this).append('<button class="iswrong">Wu-Tang Clan</button')
 
 
 
@@ -390,8 +272,8 @@ $('.e300').click(function () {
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">RightAnswer</button')
-    $(this).append('<button class="iswrong">WrongAnswer</button')
+    $(this).append('<button class="isright">Muppets</button')
+    $(this).append('<button class="iswrong">Elmo</button')
 
 
 
@@ -421,8 +303,8 @@ $('.e400').click(function () {
     $(this).prepend('<img id="dailydub" src="dailydub.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="dailydub.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">RightAnswer</button')
-    $(this).append('<button class="iswrong">WrongAnswer</button')
+    $(this).append('<button class="isright">Mbaku</button')
+    $(this).append('<button class="iswrong">Tchalla</button')
     setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
 }, 30000);
 
@@ -438,7 +320,7 @@ $('.e400').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer(entertainmentCategory[3]);
+        wrongAnswer(entertainmentCategory[3].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
 
     })
@@ -454,8 +336,8 @@ $('.e500').click(function () {
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">RightAnswer</button')
-    $(this).append('<button class="iswrong">WrongAnswer</button')
+    $(this).append('<button class="isright">2pac</button')
+    $(this).append('<button class="iswrong">Morris Chestnut</button')
     setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
 }, 30000);
 
@@ -463,7 +345,7 @@ $('.e500').click(function () {
 
     $('.isright').click(function () {
         console.log('this worked RIGHT');
-        rightAnswer(entertainmentCategory[4]);
+        rightAnswer(entertainmentCategory[4].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="moneybags.gif"></img></div>')
 
     })
@@ -471,7 +353,7 @@ $('.e500').click(function () {
     $('.iswrong').click(function () {
 
         console.log('this WORKED WRONG');
-        wrongAnswer(entertainmentCategory[4]);
+        wrongAnswer(entertainmentCategory[4].pointVal);
         popup.replaceWith('<div class="e100"><img class="lilbox" src="no.gif"></img></div>')
 
     })
@@ -487,8 +369,8 @@ $('.g100').click(function () {
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">RightAnswer</button')
-    $(this).append('<button class="iswrong">WrongAnswer</button')
+    $(this).append('<button class="isright">McMurdo, Antartica</button')
+    $(this).append('<button class="iswrong">Black Chyna</button')
     setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
 }, 30000);
 
@@ -518,8 +400,8 @@ $('.g200').click(function () {
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">RightAnswer</button')
-    $(this).append('<button class="iswrong">WrongAnswer</button')
+    $(this).append('<button class="isright">Canada</button')
+    $(this).append('<button class="iswrong">Norway</button')
     setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
 }, 30000);
 
@@ -551,8 +433,8 @@ $('.g300').click(function () {
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">RightAnswer</button')
-    $(this).append('<button class="iswrong">WrongAnswer</button')
+    $(this).append('<button class="isright">Chile</button')
+    $(this).append('<button class="iswrong">Morocco</button')
     setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
 }, 30000);
 
@@ -584,8 +466,8 @@ $('.g400').click(function () {
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">RightAnswer</button')
-    $(this).append('<button class="iswrong">WrongAnswer</button')
+    $(this).append('<button class="isright">Wakanda</button')
+    $(this).append('<button class="iswrong">Syria</button')
     setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
 }, 30000);
 
@@ -617,8 +499,8 @@ $('.g500').click(function () {
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">RightAnswer</button')
-    $(this).append('<button class="iswrong">WrongAnswer</button')
+    $(this).append('<button class="isright">Italy</button')
+    $(this).append('<button class="iswrong">Philadephia, USA</button')
     setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
 }, 30000);
 
@@ -651,8 +533,8 @@ $('.m100').click(function () {
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">RightAnswer</button')
-    $(this).append('<button class="iswrong">WrongAnswer</button')
+    $(this).append('<button class="isright">0</button')
+    $(this).append('<button class="iswrong">3</button')
     setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
 }, 30000);
 
@@ -686,8 +568,8 @@ $('.m200').click(function () {
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">RightAnswer</button')
-    $(this).append('<button class="iswrong">WrongAnswer</button')
+    $(this).append('<button class="isright">Four</button')
+    $(this).append('<button class="iswrong">Seven</button')
     setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
 }, 30000);
 
@@ -721,8 +603,8 @@ $('.m300').click(function () {
     $(this).prepend('<img id="dailydub" src="dailydub.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="dailydub.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">RightAnswer</button')
-    $(this).append('<button class="iswrong">WrongAnswer</button')
+    $(this).append('<button class="isright">1000</button')
+    $(this).append('<button class="iswrong">Ten thousand</button')
     setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
 }, 30000);
 
@@ -756,8 +638,8 @@ $('.m400').click(function () {
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">RightAnswer</button')
-    $(this).append('<button class="iswrong">WrongAnswer</button')
+    $(this).append('<button class="isright">12</button')
+    $(this).append('<button class="iswrong">21</button')
     setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
 }, 30000);
 
@@ -790,8 +672,8 @@ $('.m500').click(function () {
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">RightAnswer</button')
-    $(this).append('<button class="iswrong">WrongAnswer</button')
+    $(this).append('<button class="isright">12345678987654321</button')
+    $(this).append('<button class="iswrong">11111111</button')
     setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
 }, 30000);
 
@@ -825,8 +707,8 @@ $('.q100').click(function () {
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">RightAnswer</button')
-    $(this).append('<button class="iswrong">WrongAnswer</button')
+    $(this).append('<button class="isright">Eminem</button')
+    $(this).append('<button class="iswrong">Busta Rhymes</button')
     setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
 }, 30000);
 
@@ -859,8 +741,8 @@ $('.q200').click(function () {
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">RightAnswer</button')
-    $(this).append('<button class="iswrong">WrongAnswer</button')
+    $(this).append('<button class="isright">27</button')
+    $(this).append('<button class="iswrong">10</button')
     setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
 }, 30000);
 
@@ -893,8 +775,8 @@ $('.q300').click(function () {
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">RightAnswer</button')
-    $(this).append('<button class="iswrong">WrongAnswer</button')
+    $(this).append('<button class="isright">Plastic</button')
+    $(this).append('<button class="iswrong">Ivory</button')
     setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
 }, 30000);
 
@@ -927,8 +809,8 @@ $('.q400').click(function () {
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">RightAnswer</button')
-    $(this).append('<button class="iswrong">WrongAnswer</button')
+    $(this).append('<button class="isright">Birth Control</button')
+    $(this).append('<button class="iswrong">Police Brutality</button')
     setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
 }, 30000);
 
@@ -961,8 +843,8 @@ $('.q500').click(function () {
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">RightAnswer</button')
-    $(this).append('<button class="iswrong">WrongAnswer</button')
+    $(this).append('<button class="isright">Who</button')
+    $(this).append('<button class="iswrong">Hiphop Artist </button')
     setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
 }, 30000);
 
@@ -996,8 +878,8 @@ $('.a100').click(function () {
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">RightAnswer</button')
-    $(this).append('<button class="iswrong">WrongAnswer</button')
+    $(this).append('<button class="isright">Davinci</button')
+    $(this).append('<button class="iswrong">Michaelangelo</button')
     setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
 }, 30000);
 
@@ -1030,8 +912,8 @@ $('.a200').click(function () {
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">RightAnswer</button')
-    $(this).append('<button class="iswrong">WrongAnswer</button')
+    $(this).append('<button class="isright">VanGoh</button')
+    $(this).append('<button class="iswrong">Picasso</button')
     setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
 }, 30000);
 
@@ -1063,8 +945,8 @@ $('.a300').click(function () {
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">RightAnswer</button')
-    $(this).append('<button class="iswrong">WrongAnswer</button')
+    $(this).append('<button class="isright">5</button')
+    $(this).append('<button class="iswrong">4</button')
     setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
 }, 30000);
 
@@ -1098,8 +980,8 @@ $('.a400').click(function () {
     $(this).prepend('<img id="dailydub" src="dailydub.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="dailydub.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">RightAnswer</button')
-    $(this).append('<button class="iswrong">WrongAnswer</button')
+    $(this).append('<button class="isright">Stary Night</button')
+    $(this).append('<button class="iswrong">Arc Di Triomph</button')
     setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
 }, 30000);
 
@@ -1133,8 +1015,8 @@ $('.a500').click(function () {
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">RightAnswer</button')
-    $(this).append('<button class="iswrong">WrongAnswer</button')
+    $(this).append('<button class="isright">32</button')
+    $(this).append('<button class="iswrong">64</button')
     setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
 }, 30000);
 
