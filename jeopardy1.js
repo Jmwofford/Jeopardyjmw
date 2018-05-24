@@ -845,7 +845,7 @@ $('.q500').click(function () {
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">Who</button')
-    $(this).append('<button class="iswrong">Hiphop Artist </button')
+    $(this).append('<button class="iswrong">Battle Rapper</button')
     setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
 }, 30000);
 
@@ -946,8 +946,8 @@ $('.a300').click(function () {
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">5</button')
-    $(this).append('<button class="iswrong">4</button')
+    $(this).append('<button class="isright">4</button')
+    $(this).append('<button class="iswrong">3</button')
     setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
 }, 30000);
 
