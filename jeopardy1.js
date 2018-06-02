@@ -1,7 +1,3 @@
-// alert("Welcome to Jeopardy");
-// alert("Directions: Pick a category and a point value. Click on the chosen box for the question. Students must give the answer in the form of a question before clicking again. The teacher may want to set a time limit for answering the question. To see if a student or group is correct, click again for the answer. Click the “Back to Board” button on the slide to return to the main board. If the student or team is correct, they are awarded the point value of the question. (Click the “Score” button located on the main board to add the point value to the appropriate team score.The dollar values disappear after each question. Continue until all questions have been answered. The team with the most points wins.");
-
-
 
 var score = 0;
 
@@ -31,7 +27,7 @@ window.onload = function () {
 }
 
 var checkWinCondition = function () {
-    if (score >= 4500) {     
+    if (score >= 4500) {
         $('#j').replaceWith('<h1 class="winprompt">YOU WIN</h1>')
         $('.superclassGrid').replaceWith('<img id="winning" src="break.gif" />');
         $('.score').replaceWith('<audio autoplay src="ricflair.mp3" type="audio/mp3">');
@@ -156,7 +152,7 @@ const musicCategory = [
     },
     {
         question: 'What was Bob Marleys song I Shot the Sheriff really about???',
-        answer:'birthcontrol',
+        answer: 'birthcontrol',
         id: 'q400',
         pointVal: 800
     },
@@ -177,7 +173,7 @@ const artCategory = [
     {
         question: 'What Contemporary Artist cut off his ear ??',
         answer: 'John Lennon',
-        
+
         answer: "Man in Mirror",
         id: 'a200',
         pointVal: 400
@@ -204,9 +200,6 @@ const artCategory = [
 
 //===================================================================//
 $('.e100').click(function () {
-    // const question = index.find((question) => {
-    //     return question.id === 'q100'
-    // })
 
     const popup = $(this)
     $(this).html(`<h3>${entertainmentCategory[0].question}</h3>`)
@@ -215,8 +208,9 @@ $('.e100').click(function () {
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">Billie Jean</button')
     $(this).append('<button class="iswrong">Bonita AppleBum</button')
-    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
-}, 30000);
+    setTimeout(function () {
+        popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+    }, 30000);
 
 
     $('.isright').click(function () {
@@ -234,9 +228,7 @@ $('.e100').click(function () {
     })
 })
 $('.e200').click(function () {
-    // const question = index.find((question) => {
-    //     return question.id === 'q100'
-    // })
+  
 
     const popup = $(this)
     $(this).html(`<h3>${entertainmentCategory[1].question}</h3>`)
@@ -264,9 +256,7 @@ $('.e200').click(function () {
     })
 })
 $('.e300').click(function () {
-    // const question = index.find((question) => {
-    //     return question.id === 'q100'
-    // })
+  
 
     const popup = $(this)
     $(this).html(`<h3>${entertainmentCategory[2].question}</h3>`)
@@ -295,9 +285,7 @@ $('.e300').click(function () {
 })
 ///////////DailyDouble//////////////
 $('.e400').click(function () {
-    // const question = index.find((question) => {
-    //     return question.id === 'q100'
-    // })
+    
 
     const popup = $(this)
     $(this).html(`<h3>${entertainmentCategory[3].question}</h3>`)
@@ -306,8 +294,9 @@ $('.e400').click(function () {
     $(this).append('<audio autoplay src="dailydub.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">Mbaku</button')
     $(this).append('<button class="iswrong">Tchalla</button')
-    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
-}, 30000);
+    setTimeout(function () {
+        popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+    }, 30000);
 
 
 
@@ -328,9 +317,7 @@ $('.e400').click(function () {
 })
 ///////////DailyDouble//////////////
 $('.e500').click(function () {
-    // const question = index.find((question) => {
-    //     return question.id === 'q100'
-    // })
+   
 
     const popup = $(this)
     $(this).html(`<h3>${entertainmentCategory[4].question}</h3>`)
@@ -339,8 +326,9 @@ $('.e500').click(function () {
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">2pac</button')
     $(this).append('<button class="iswrong">Morris Chestnut</button')
-    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
-}, 30000);
+    setTimeout(function () {
+        popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+    }, 30000);
 
 
 
@@ -361,9 +349,7 @@ $('.e500').click(function () {
 })
 // =======================================================entertainmentCategory========================
 $('.g100').click(function () {
-    // const question = index.find((question) => {
-    //     return question.id === 'q100'
-    // })
+  
 
     const popup = $(this)
     $(this).html(`<h3>${geographyCategory[0].question}</h3>`)
@@ -372,8 +358,9 @@ $('.g100').click(function () {
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">McMurdo, Antartica</button')
     $(this).append('<button class="iswrong">Black Chyna</button')
-    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
-}, 30000);
+    setTimeout(function () {
+        popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+    }, 30000);
 
 
 
@@ -392,9 +379,7 @@ $('.g100').click(function () {
     })
 })
 $('.g200').click(function () {
-    // const question = index.find((question) => {
-    //     return question.id === 'q100'
-    // })
+   
 
     const popup = $(this)
     $(this).html(`<h3>${geographyCategory[1].question}</h3>`)
@@ -403,8 +388,9 @@ $('.g200').click(function () {
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">Canada</button')
     $(this).append('<button class="iswrong">Norway</button')
-    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
-}, 30000);
+    setTimeout(function () {
+        popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+    }, 30000);
 
 
 
@@ -425,9 +411,7 @@ $('.g200').click(function () {
     })
 })
 $('.g300').click(function () {
-    // const question = index.find((question) => {
-    //     return question.id === 'q100'
-    // })
+ 
 
     const popup = $(this)
     $(this).html(`<h3>${geographyCategory[2].question}</h3>`)
@@ -436,8 +420,9 @@ $('.g300').click(function () {
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">Chile</button')
     $(this).append('<button class="iswrong">Morocco</button')
-    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
-}, 30000);
+    setTimeout(function () {
+        popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+    }, 30000);
 
 
 
@@ -458,9 +443,7 @@ $('.g300').click(function () {
     })
 })
 $('.g400').click(function () {
-    // const question = index.find((question) => {
-    //     return question.id === 'q100'
-    // })
+   
 
     const popup = $(this)
     $(this).html(`<h3>${geographyCategory[3].question}</h3>`)
@@ -469,8 +452,9 @@ $('.g400').click(function () {
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">Wakanda</button')
     $(this).append('<button class="iswrong">Syria</button')
-    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
-}, 30000);
+    setTimeout(function () {
+        popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+    }, 30000);
 
 
 
@@ -491,9 +475,7 @@ $('.g400').click(function () {
     })
 })
 $('.g500').click(function () {
-    // const question = index.find((question) => {
-    //     return question.id === 'q100'
-    // })
+ 
 
     const popup = $(this)
     $(this).html(`<h3>${geographyCategory[4].question}</h3>`)
@@ -502,8 +484,9 @@ $('.g500').click(function () {
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">Italy</button')
     $(this).append('<button class="iswrong">Philadephia, USA</button')
-    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
-}, 30000);
+    setTimeout(function () {
+        popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+    }, 30000);
 
 
 
@@ -525,9 +508,7 @@ $('.g500').click(function () {
 })
 // ================================================geographyCategory====================================
 $('.m100').click(function () {
-    // const question = index.find((question) => {
-    //     return question.id === 'q100'
-    // })
+  
 
     const popup = $(this)
     $(this).html(`<h3>${mathCategory[0].question}</h3>`)
@@ -536,8 +517,9 @@ $('.m100').click(function () {
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">0</button')
     $(this).append('<button class="iswrong">3</button')
-    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
-}, 30000);
+    setTimeout(function () {
+        popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+    }, 30000);
 
 
 
@@ -559,9 +541,7 @@ $('.m100').click(function () {
     })
 })
 $('.m200').click(function () {
-    // const question = index.find((question) => {
-    //     return question.id === 'q100'
-    // })
+  
 
     const popup = $(this)
 
@@ -571,8 +551,9 @@ $('.m200').click(function () {
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">Four</button')
     $(this).append('<button class="iswrong">Seven</button')
-    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
-}, 30000);
+    setTimeout(function () {
+        popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+    }, 30000);
 
 
 
@@ -594,9 +575,7 @@ $('.m200').click(function () {
 })
 ///////////DailyDouble//////////////
 $('.m300').click(function () {
-    // const question = index.find((question) => {
-    //     return question.id === 'q100'
-    // })
+ 
 
     const popup = $(this)
 
@@ -606,8 +585,9 @@ $('.m300').click(function () {
     $(this).append('<audio autoplay src="dailydub.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">1000</button')
     $(this).append('<button class="iswrong">Ten thousand</button')
-    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
-}, 30000);
+    setTimeout(function () {
+        popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+    }, 30000);
 
 
 
@@ -629,9 +609,7 @@ $('.m300').click(function () {
 })
 ///////////DailyDouble//////////////
 $('.m400').click(function () {
-    // const question = index.find((question) => {
-    //     return question.id === 'q100'
-    // })
+   
 
     const popup = $(this)
 
@@ -641,8 +619,9 @@ $('.m400').click(function () {
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">12</button')
     $(this).append('<button class="iswrong">21</button')
-    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
-}, 30000);
+    setTimeout(function () {
+        popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+    }, 30000);
 
 
 
@@ -663,9 +642,7 @@ $('.m400').click(function () {
     })
 })
 $('.m500').click(function () {
-    // const question = index.find((question) => {
-    //     return question.id === 'q100'
-    // })
+
     const popup = $(this)
 
 
@@ -675,8 +652,9 @@ $('.m500').click(function () {
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">12345678987654321</button')
     $(this).append('<button class="iswrong">11111111</button')
-    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
-}, 30000);
+    setTimeout(function () {
+        popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+    }, 30000);
 
 
 
@@ -698,9 +676,7 @@ $('.m500').click(function () {
 })
 // ================================================MathCategory===========================================
 $('.q100').click(function () {
-    // const question = index.find((question) => {
-    //     return question.id === 'q100'
-    // })
+  
 
     const popup = $(this)
 
@@ -710,8 +686,9 @@ $('.q100').click(function () {
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">Eminem</button')
     $(this).append('<button class="iswrong">Busta Rhymes</button')
-    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
-}, 30000);
+    setTimeout(function () {
+        popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+    }, 30000);
 
 
 
@@ -732,10 +709,7 @@ $('.q100').click(function () {
     })
 })
 $('.q200').click(function () {
-    // const question = index.find((question) => {
-    //     return question.id === 'q100'
-    // })
-
+    
     const popup = $(this)
 
     $(this).html(`<h3>${musicCategory[1].question}</h3>`)
@@ -744,8 +718,9 @@ $('.q200').click(function () {
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">27</button')
     $(this).append('<button class="iswrong">10</button')
-    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
-}, 30000);
+    setTimeout(function () {
+        popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+    }, 30000);
 
 
 
@@ -766,9 +741,7 @@ $('.q200').click(function () {
     })
 })
 $('.q300').click(function () {
-    // const question = index.find((question) => {
-    //     return question.id === 'q100'
-    // })
+   
 
     const popup = $(this)
 
@@ -778,8 +751,9 @@ $('.q300').click(function () {
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">Plastic</button')
     $(this).append('<button class="iswrong">Ivory</button')
-    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
-}, 30000);
+    setTimeout(function () {
+        popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+    }, 30000);
 
 
 
@@ -800,9 +774,7 @@ $('.q300').click(function () {
     })
 })
 $('.q400').click(function () {
-    // const question = index.find((question) => {
-    //     return question.id === 'q100'
-    // })
+   
 
     const popup = $(this)
 
@@ -812,8 +784,9 @@ $('.q400').click(function () {
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">Birth Control</button')
     $(this).append('<button class="iswrong">Police Brutality</button')
-    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
-}, 30000);
+    setTimeout(function () {
+        popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+    }, 30000);
 
 
 
@@ -834,10 +807,7 @@ $('.q400').click(function () {
     })
 })
 $('.q500').click(function () {
-    // const question = index.find((question) => {
-    //     return question.id === 'q100'
-    // })
-
+   
     const popup = $(this)
 
     $(this).html(`<h3>${musicCategory[4].question}</h3>`)
@@ -845,9 +815,10 @@ $('.q500').click(function () {
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">Who</button')
-    $(this).append('<button class="iswrong">Battle Rapper</button')
-    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
-}, 30000);
+    $(this).append('<button class="iswrong">Hiphop Artist </button')
+    setTimeout(function () {
+        popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+    }, 30000);
 
 
 
@@ -869,10 +840,7 @@ $('.q500').click(function () {
 })
 // =================================================================musicCategory==========================
 $('.a100').click(function () {
-    // const question = index.find((question) => {
-    //     return question.id === 'q100'
-    // })
-
+  
     const popup = $(this)
 
     $(this).html(`<h3>${artCategory[0].question}</h3>`)
@@ -881,8 +849,9 @@ $('.a100').click(function () {
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">Michaelangelo</button')
     $(this).append('<button class="iswrong">Davinci</button')
-    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
-}, 30000);
+    setTimeout(function () {
+        popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+    }, 30000);
 
 
 
@@ -903,9 +872,7 @@ $('.a100').click(function () {
     })
 })
 $('.a200').click(function () {
-    // const question = index.find((question) => {
-    //     return question.id === 'q100'
-    // })
+  
 
     const popup = $(this)
 
@@ -915,8 +882,9 @@ $('.a200').click(function () {
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">VanGoh</button')
     $(this).append('<button class="iswrong">Picasso</button')
-    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
-}, 30000);
+    setTimeout(function () {
+        popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+    }, 30000);
 
 
 
@@ -936,9 +904,7 @@ $('.a200').click(function () {
     })
 })
 $('.a300').click(function () {
-    // const question = index.find((question) => {
-    //     return question.id === 'q100'
-    // })
+   
 
     const popup = $(this)
 
@@ -946,10 +912,11 @@ $('.a300').click(function () {
     $(this).prepend('<img id="clock" src="timer30.gif" />')
     $(this).css({ position: 'absolute', height: '400px', width: '600px', background: 'rgba(0,0,0,.9)' })
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
-    $(this).append('<button class="isright">4</button')
-    $(this).append('<button class="iswrong">3</button')
-    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
-}, 30000);
+    $(this).append('<button class="isright">5</button')
+    $(this).append('<button class="iswrong">4</button')
+    setTimeout(function () {
+        popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+    }, 30000);
 
 
 
@@ -971,9 +938,7 @@ $('.a300').click(function () {
 })
 ///////////DailyDouble//////////////
 $('.a400').click(function () {
-    // const question = index.find((question) => {
-    //     return question.id === 'q100'
-    // })
+    
 
     const popup = $(this)
 
@@ -983,8 +948,9 @@ $('.a400').click(function () {
     $(this).append('<audio autoplay src="dailydub.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">Stary Night</button')
     $(this).append('<button class="iswrong">Arc Di Triomph</button')
-    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
-}, 30000);
+    setTimeout(function () {
+        popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+    }, 30000);
 
 
 
@@ -1006,9 +972,7 @@ $('.a400').click(function () {
 })
 ///////////DailyDouble//////////////
 $('.a500').click(function () {
-    // const question = index.find((question) => {
-    //     return question.id === 'q100'
-    // })
+  
 
     const popup = $(this)
 
@@ -1018,8 +982,9 @@ $('.a500').click(function () {
     $(this).append('<audio autoplay src="jeopardytheme.mp3" type="audio/mp3">');
     $(this).append('<button class="isright">32</button')
     $(this).append('<button class="iswrong">64</button')
-    setTimeout(function(){popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
-}, 30000);
+    setTimeout(function () {
+        popup.replaceWith('<div class="e100"><img class="questionmiss" src="questionmiss.gif"></img></div>')
+    }, 30000);
 
 
 
